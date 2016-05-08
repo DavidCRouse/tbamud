@@ -1,0 +1,418 @@
+#1000
+The Central Tower's Zone Description Room~
+Builder      : Anyok
+Zone         : 10 The Central Tower
+Began        : March 1, 2015
+Player Level : N/A
+Rooms        : ?
+Mobs         : ?
+Objects      : ?
+Shops        : ?
+Triggers     : ?
+Plot         :
+   This is the "God Simplex" style zone for RouseWorld's MUD. A good place to 
+start is room 1010.
+   Zone 10 is linked to the following zones:
+   * None
+~
+10 0 0 0 0 0
+S
+#1010
+Star Chamber~
+   This round room has a high conical ceiling and is dominated by four wide 
+and tall image panels which seem to be showing a panoramic view of the 
+outside -- moon Rouse's Place Sigma of the gas giant Kerbstrex-9567-g, home of 
+this doomed mining camp, Minrith-42. Running along the walls just under the 
+panels are padded benches. There is a spiral staircase in the center of the room
+going down.
+~
+10 8 0 0 0 0
+D0
+   Through the northern view panel, a low mountain range is visible.~
+~
+0 0 -1
+D1
+   The eastern view panel displays a view of a cratered plain.~
+~
+0 0 -1
+D2
+   The main feature visible from the southern view panel is Kerbstrex-9567-g. 
+The panel shows it in color more vivid than real life. Different shades of 
+orange trace the flow of lines of storms in it's upper atmosphere. 
+Looking closely, some of the other moons orbiting around 9567-g can be seen.~
+~
+0 0 -1
+D3
+   The stars of the Pallington Cluster, home of the Kerbstrex family, are 
+visible through the western view panel. The Kerbstrex family granted the Rouse 
+Corporation mining rights to this system nearly 40 years ago.~
+~
+0 0 -1
+D4
+   At the top of the ceiling is a 10 inch bright metallic disk embossed with 
+the Kerbstrex family crest.~
+~
+0 0 -1
+D5
+   The spiral staircase is made of polished but unpainted plast-steel, which 
+gives it an orange-brown color with a grain that resembles wood. It is padded
+in off-white to match the rest of the decor.~
+~
+0 0 1011
+E
+floor~
+   All of the The floors are set with white hexagon tiles with black grout. 
+The style is typical for colony administrative areas in the Pallington cluster.
+~
+E
+roof ceiling~
+   At the top of the ceiling is a 10 inch bright metallic disk embossed with 
+the Kerbstrex family crest.
+~
+E
+staircase stairs~
+   The spiral staircase is made of polished but unpainted plast-steel, which 
+gives it an orange-brown color with a grain that resembles wood. It is padded
+in off-white to match the rest of the decor.
+~
+E
+wall walls~
+   All of the walls are colored off-white with hidden indirect lightning and 
+ventilation ducts.
+~
+E
+bench benches~
+   The benches, like all of the furniture and walls, are an off-white color. 
+They are well padded.
+~
+E
+view views outside~
+   The panels show a false color view of the sky above Rouse's Place Sigma. 
+The brilliant stars of the Pallington Cluster are rendered in blue and red. 
+Kerbstrex-9567-g looms in the southern horizon, a vivid orange. Between them 
+and this tower is the giant perma-plex bubble canopy that shields and gives 
+breathable atmosphere to this mining camp. When visible, the canopy looks like 
+the surface of an iridescent soap bubble. The panels don't quite show the mining
+camp itself, however, as the point of view is too high.
+~
+E
+images image panels panel~
+   The panels start just above the backs of the benches and go almost all the 
+way to the top of the ceiling. Each panel curves with the wall and is separated 
+from the other panels by about a foot, at the base of the panel.
+~
+E
+gas giant storm storms moon kerbstrex kerbstrex-9567-g~
+   The false-color image of gas giant Kerbstrex-9567-g is visible to the south. 
+The orange colors serve to heighten the contrast of the clouds making up the 
+storms that circle that world. Also visible are a few of the other moons of
+9567-g.
+~
+E
+pallington cluster star stars~
+   The stars of the Pallington Cluster are the home of the Kerbstrex family. 
+The Kerbstrex family granted the Rouse Corporation mining rights to this system 
+nearly 40 years ago.
+~
+S
+#1011
+Second Level Stair Landing~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 -1
+D1
+   East~
+~
+0 0 1013
+D2
+   South~
+~
+0 0 -1
+D3
+   West~
+~
+0 0 1012
+D4
+   Up~
+~
+0 0 1010
+D5
+   Down~
+~
+0 0 1014
+S
+#1012
+Inn of the Admins~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 -1
+D1
+   East~
+~
+0 0 1011
+D2
+   South~
+~
+0 0 -1
+D3
+   West~
+~
+0 0 -1
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1013
+Admin Post Office~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 -1
+D1
+   East~
+~
+0 0 -1
+D2
+   South~
+~
+0 0 -1
+D3
+   West~
+~
+0 0 1011
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1014
+Third Level Stair Landing~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 1016
+D1
+   East~
+~
+0 0 1017
+D2
+   South~
+~
+0 0 1018
+D3
+   West~
+~
+0 0 1015
+D4
+   Up~
+~
+0 0 1011
+D5
+   Down~
+~
+0 0 1019
+S
+#1015
+Mortal Board Room~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 1016
+D1
+   East~
+~
+0 0 1014
+D2
+   South~
+~
+0 0 1018
+D3
+   West~
+~
+0 0 -1
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1016
+Social Gathering Room~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 -1
+D1
+   East~
+~
+0 0 1017
+D2
+   South~
+~
+0 0 1014
+D3
+   West~
+~
+0 0 1015
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1017
+Immortal Board Room~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 1016
+D1
+   East~
+~
+0 0 -1
+D2
+   South~
+~
+0 0 1018
+D3
+   West~
+~
+0 0 1014
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1018
+Restaurant at the Center of the Universe~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 1014
+D1
+   East~
+~
+0 0 1017
+D2
+   South~
+~
+0 0 -1
+D3
+   West~
+~
+0 0 1015
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+#1019
+Fourth Level Stair Landing~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 1020
+D1
+   East~
+~
+0 0 -1
+D2
+   South~
+~
+0 0 -1
+D3
+   West~
+~
+0 0 -1
+D4
+   Up~
+~
+0 0 1014
+D5
+   Down~
+~
+0 0 -1
+S
+#1020
+Admin Ice Box~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North~
+~
+0 0 -1
+D1
+   East~
+~
+0 0 -1
+D2
+   South~
+~
+0 0 1019
+D3
+   West~
+~
+0 0 -1
+D4
+   Up~
+~
+0 0 -1
+D5
+   Down~
+~
+0 0 -1
+S
+$~
