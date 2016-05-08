@@ -1,3 +1,4 @@
 bin/*
 src/*.o
 src/util/*.o
+.DS_Store
