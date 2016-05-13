@@ -264,8 +264,8 @@ int use_new_socials = YES;
 
 const char *MENU =
 "\r\n"
-"Welcome to tbaMUD!\r\n"
-"\t(0\t)) Exit from tbaMUD.\r\n"
+"Welcome to RouseWorld!\r\n"
+"\t(0\t)) Exit from the MUD.\r\n"
 "\t(1\t)) Enter the game.\r\n"
 "\t(2\t)) Enter description.\r\n"
 "\t(3\t)) Read the background story.\r\n"
@@ -276,11 +276,11 @@ const char *MENU =
 
 const char *WELC_MESSG =
 "\r\n"
-"Welcome to tbaMUD!  May your visit here be... Enlightening"
+"Welcome to RouseWorld!  May your visit here be ... Enlightening"
 "\r\n\r\n";
 
 const char *START_MESSG =
-"Welcome.  This is your new tbaMUD character!  You can now earn gold,\r\n"
+"Welcome.  This is your new RouseWorld MUD character!  You can now earn gold,\r\n"
 "gain experience, find weapons and equipment, and much more -- while\r\n"
 "meeting people from around the world!\r\n";
 
