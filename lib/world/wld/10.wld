@@ -117,34 +117,64 @@ nearly 40 years ago.
 S
 #1011
 Second Level Stair Landing~
-   You are in an unfinished room.
+   Here the stairs flatten out for one half-circle section. On the wall is
+stenciled the number '2' there are exits to the west and east.
 ~
 10 8 0 0 0 0
 D0
-   North~
+   All you see is the plain off-white walls.~
 ~
 0 0 -1
 D1
-   East~
+   To the east is a standard auto-opening blast door.~
 ~
 0 0 1013
 D2
-   South~
+   It looks like one of the maintenance panels is loose, otherwise just plain
+off-white walls.~
 ~
 0 0 -1
 D3
-   West~
+   To the west is an auto-opening blast door.~
 ~
 0 0 1012
 D4
-   Up~
+   The stairs spiral up to the next level.~
 ~
 0 0 1010
 D5
-   Down~
+   The stairs spiral down to the lower levels.~
 ~
 0 0 1014
 S
+E
+staircase stairs~
+   The open-air spiral staircase is made of polished but unpainted plast-steel, 
+which gives it an orange-brown color with a grain that resembles wood. It is 
+padded in off-white to match the rest of the decor. Like a lot of interior 
+design in this galaxy, there are no railings.
+~
+E
+wall walls~
+   All of the walls are colored off-white with hidden indirect lightning and 
+ventilation ducts. The number '2' is stenciled in a dark-blue sans-serif font. 
+~
+E
+number 2 stencil~
+   The number '2' is stenciled in a dark-blue sans-serif font which is a bit
+stylized, typical of Pallington cluster interior design. 
+~
+E
+panel panels maintenance~
+   One of the maintenance panels is slightly loose, showing a bit of the modular 
+conduit blocks behind. It doesn't look like the panel can be opened enough to
+get to the blocks, however. 
+~
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
 #1012
 Inn of the Admins~
    You are in an unfinished room.
