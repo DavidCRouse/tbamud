@@ -118,7 +118,7 @@ S
 #1011
 Second Level Stair Landing~
    Here the stairs flatten out for one half-circle section. On the wall is
-stenciled the number '2' there are exits to the west and east.
+stenciled the number '2' and there are exits to the west and east.
 ~
 10 8 0 0 0 0
 D0
@@ -173,6 +173,10 @@ E
 blast door doors~
    This is a standard auto-opening blast door. It doesn't seem to be set to 
 either the locked or manually opening mode.
+~
+E
+floor landing~
+   The floor here is a plast-steel grate with the same finish as the stairs.
 ~
 S
 #1012
