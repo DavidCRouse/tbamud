@@ -145,6 +145,7 @@ D4
 D5
    The stairs spiral down to the lower levels.~
 ~
+0 0 1014
 E
 staircase stairs~
    The open-air spiral staircase is made of polished but unpainted plast-steel, 
@@ -173,7 +174,6 @@ blast door doors~
    This is a standard auto-opening blast door. It doesn't seem to be set to 
 either the locked or manually opening mode.
 ~
-0 0 1014
 S
 #1012
 Inn of the Admins~
