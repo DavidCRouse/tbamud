@@ -82,7 +82,8 @@ gives it an orange-brown color with a grain that resembles wood.
 E
 wall walls~
    All of the walls are colored off-white with hidden indirect lightning and 
-ventilation ducts.
+ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks.
 ~
 E
 bench benches~
@@ -118,11 +119,15 @@ pallington cluster star stars~
 The Kerbstrex family granted the Rouse Corporation mining rights to this system 
 nearly 40 years ago.
 ~
+E
+maintenance panels panel sensor block blocks~
+The panels and sensor blocks are standard and look locked and functional.
+~ 
 S
 #1011
 Second Level Stair Landing~
-   Here the stairs flatten out for one half-circle landing along the north side 
-of the cylindrical wall. The north side of the wall also has a stenciled '2.'
+   Here the stairs flatten out for a half-circle landing along the north side of
+the cylindrical wall. The north side of the wall has a stenciled  number '2.' 
 On the landing are exits to the west and east.
 ~
 10 8 0 0 0 0
@@ -158,17 +163,17 @@ D5
 ~
 0 0 1014
 E
-staircase stairs~
+staircase stairs stair~
    The open-air spiral staircase is made of polished but unpainted plast-steel, 
-which gives it an orange-brown color with a grain that resembles wood. It is 
-padded in off-white to match the rest of the decor. Like a lot of interior 
-design in this galaxy, there are no railings.
+which gives it an orange-brown color with a grain that resembles wood. Like a 
+lot of interior design in this galaxy, there are no railings.
 ~
 E
 wall walls~
    The cylindrical walls are colored off-white with hidden indirect lightning 
-and ventilation ducts. The number '2' is stenciled in a dark-blue sans-serif 
-font on the northern side. 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks. The number '2' is stenciled in a dark-blue 
+sans-serif font on the northern side. 
 ~
 E
 number 2 stencil~
