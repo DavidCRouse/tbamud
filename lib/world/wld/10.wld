@@ -123,7 +123,7 @@ S
 Second Level Stair Landing~
    Here the stairs flatten out for one half-circle landing along the north side 
 of the cylindrical wall. The north side of the wall also has a stenciled '2.'
-There are exits to the west and east.
+On the landing are exits to the west and east.
 ~
 10 8 0 0 0 0
 D0
@@ -148,7 +148,7 @@ D3
 ~
 0 0 1012
 D4
-   The stairs spiral up to the next level.
+   The stairs spiral up to the next level, where they end.
 ~
 ~
 0 0 1010
