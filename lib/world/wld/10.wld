@@ -65,9 +65,9 @@ gives it an orange-brown color with a grain that resembles wood.
 ~
 0 0 1011
 E
-floor~
-   All of the The floors are set with white hexagon tiles with black grout. 
-The style is typical for colony administrative areas in the Pallington cluster.
+floor floors~
+   The floor is set with white hexagon tiles with black grout. The style is 
+typical for colony administrative areas in the Pallington cluster.
 ~
 E
 roof ceiling~
@@ -75,7 +75,7 @@ roof ceiling~
 the Kerbstrex family crest.
 ~
 E
-staircase stairs~
+staircase stair stairs~
    The spiral staircase is made of polished but unpainted plast-steel, which 
 gives it an orange-brown color with a grain that resembles wood.
 ~
@@ -120,8 +120,8 @@ The Kerbstrex family granted the Rouse Corporation mining rights to this system
 nearly 40 years ago.
 ~
 E
-maintenance panels panel sensor block blocks~
-   The panels and sensor blocks are standard and seem locked and functional.
+maintenance sensor sensors block blocks~
+   The panels and sensor blocks are standard and seem functional but locked.
 ~
 S
 #1011
@@ -172,8 +172,8 @@ E
 wall walls~
    The cylindrical walls are colored off-white with hidden indirect lightning 
 and ventilation ducts. At random internvals the plain walls are punctuated by 
-maintenance panels and sensor blocks. The number '2' is stenciled in a dark-blue 
-sans-serif font on the northern side. 
+maintenance panels and sensor blocks. The number '2' is stenciled in a dark-
+blue sans-serif font on the northern side. 
 ~
 E
 number 2 stencil~
@@ -192,45 +192,89 @@ blast door doors~
 either the locked or manually opening mode.
 ~
 E
-floor landing~
+floor floors landing~
    The floor here is plast-steel with the same finish as the stairs.
 ~
 S
 #1012
 Inn of the Admins~
-   You are in an unfinished room.
+   This semi-circular room has a bank of controls along the west wall. In front
+of the the controls is a curved reception desk about four feet high. The desk 
+curves towards the center of the room, while the bank of controls curves with 
+the wall. When an Admin comes to rent their belongings, their essence is stored 
+in the computer banks.
 ~
 10 8 0 0 0 0
 D0
-   North
+   Here is a curving wall, looking the same as most other walls in the tower.
 ~
 ~
 0 0 -1
 D1
-   East
+   The eastern wall is straight. In the center of the wall is an auto-opening
+blast door.
 ~
 ~
 0 0 1011
 D2
-   South
+   Here is a curving wall, looking the same as most other walls in the tower.
 ~
 ~
 0 0 -1
 D3
-   West
+   Along the western wall are control stations -- several joined sections of 
+screens, lights, switches, levers and dials in dark colors.
 ~
 ~
 0 0 -1
 D4
-   Up
+   The ceiling is a seamless stretch of off-white
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+wall walls~
+   The cylindrical walls are colored off-white with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls have maintenance 
+panels and sensor blocks.
+~
+E
+maintenance sensor sensors block blocks~
+   The panels and sensor blocks are standard and seem functional but locked.
+~
+E
+floor floors~
+   The floor is set with white hexagon tiles with black grout.
+~
+E
+ceiling~
+   The ceiling is a seamless stretch of off-white.
+~
+E
+bank banks control controls station stations~
+   The bank of controls is several joined sections of screens, lights and 
+switches, levers and dials in dark colors. It seems to run the Admins storage 
+system.
+~
+E
+desk~
+   The desk is off-white with an orange-brown plast-steel top. No drawers 
+or other openings are evident.
+~
+E
+screen screens light lights switch switches lever levers dial dials~
+   All of the controls appear to be functional, but are in a locked state.
+~
 S
 #1013
 Admin Post Office~
