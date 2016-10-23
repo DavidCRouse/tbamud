@@ -228,7 +228,7 @@ screens, lights, switches, levers and dials in dark colors.
 ~
 0 0 -1
 D4
-   The ceiling is a seamless stretch of off-white
+   The ceiling is a seamless stretch of off-white.
 ~
 ~
 0 0 -1
@@ -278,39 +278,85 @@ screen screens light lights switch switches lever levers dial dials~
 S
 #1013
 Admin Post Office~
-   You are in an unfinished room.
+   This half-circle room is divided in two by a 4 foot high counter which blocks
+off the eastern half. There are posters on the front of the counter that 
+discuss mailing regulations and fees.
 ~
 10 8 0 0 0 0
 D0
-   North
+   Here is a curving wall, looking very much the same as the other walls.
 ~
 ~
 0 0 -1
 D1
-   East
+   Past the counter is a set of control stations built into the eastern wall.
 ~
 ~
 0 0 -1
 D2
-   South
+   Here is a curving wall, looking pretty much the same as the other walls.
 ~
 ~
 0 0 -1
 D3
-   West
+   The western wall is straight. In the center of the wall is an auto-opening
+blast door.
 ~
 ~
 0 0 1011
 D4
-   Up
+   The ceiling is a seamless stretch of off-white.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+wall walls~
+   The cylindrical walls are colored off-white with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls have maintenance 
+panels and sensor blocks.
+~
+E
+maintenance sensor sensors block blocks~
+   The panels and sensor blocks are standard and seem functional but locked.
+~
+E
+floor floors~
+   The floor is set with white hexagon tiles with black grout.
+~
+E
+ceiling~
+   The ceiling is a seamless stretch of off-white.
+~
+E
+control controls station stations~
+   There are several joined control stations flush with the eastern wall.
+The stations are made up of screens, lights and switches, levers and dials in 
+dark colors. They seem to run the Admin postal system.
+~
+E
+screen screens light lights switch switches lever levers dial dials~
+   All of the controls appear to be functional, but are in a locked state.
+~
+E
+counter~
+   The long counter is off-white with an orange-brown plast-steel top. There are
+posters on the front with information about mailing regulations and fees.
+~
+E
+poster posters~
+   The posters promote both digital and physical delivery with the Imperial 
+Postal Service, as well as regulations and fees associated with those services.
+~
 S
 #1014
 Third Level Stair Landing~
