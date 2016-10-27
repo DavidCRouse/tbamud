@@ -360,39 +360,69 @@ Postal Service, as well as regulations and fees associated with those services.
 S
 #1014
 Third Level Stair Landing~
-   You are in an unfinished room.
+   The stairs are interrupted by a full-circle landing. On the north side of the
+circular wall of the staircase is a stenciled number '3.' The landing has exits 
+to the north, south, east and west.
 ~
 10 8 0 0 0 0
 D0
-   North
+   In the center of the north wall is an auto-opening blast door. To the right 
+of the door is the stenciled number '3.'
+~
+~
+0 0 1021
+D1
+   To the east is a standard auto-opening blast door.
 ~
 ~
 0 0 1016
-D1
-   East
-~
-~
-0 0 1017
 D2
-   South
+   To the south is a typical auto-opening blast door.
 ~
 ~
 0 0 1018
 D3
-   West
+   To the west is an ordinary auto-opening blast door.
 ~
 ~
 0 0 1015
 D4
-   Up
+   The stairs spiral up to the higher levels
 ~
 ~
 0 0 1011
 D5
-   Down
+   The stairs spiral down to the next level, where they end.
 ~
 ~
 0 0 1019
+E
+staircase stairs stair~
+   The open-air spiral staircase is made of polished but unpainted plast-steel, 
+which gives it an orange-brown color with a grain that resembles wood. Like a 
+lot of interior design in this galaxy, there are no railings.
+~
+E
+wall walls~
+   The cylindrical walls are colored off-white with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks. The number '2' is stenciled in a dark-
+blue sans-serif font on the northern side. 
+~
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+floor floors landing~
+   The floor here is plast-steel with the same finish as the stairs.
+~
+E
+number 3 stencil~
+   The number '3' is stenciled in a dark-blue sans-serif font which is a bit
+stylized, typical of Pallington cluster interior design. 
+~
 S
 #1015
 Mortal Board Room~
@@ -403,7 +433,7 @@ D0
    North
 ~
 ~
-0 0 1016
+0 0 1020
 D1
    East
 ~
@@ -413,7 +443,7 @@ D2
    South
 ~
 ~
-0 0 1018
+0 0 1017
 D3
    West
 ~
@@ -431,7 +461,7 @@ D5
 0 0 -1
 S
 #1016
-Social Gathering Room~
+Immortal Board Room~
    You are in an unfinished room.
 ~
 10 8 0 0 0 0
@@ -439,22 +469,22 @@ D0
    North
 ~
 ~
-0 0 -1
+0 0 1022
 D1
    East
 ~
 ~
-0 0 1017
+0 0 -1
 D2
    South
 ~
 ~
-0 0 1014
+0 0 1019
 D3
    West
 ~
 ~
-0 0 1015
+0 0 1014
 D4
    Up
 ~
@@ -467,7 +497,79 @@ D5
 0 0 -1
 S
 #1017
-Immortal Board Room~
+Restaurant at the Center of the Universe (left)~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North
+~
+~
+0 0 1015
+D1
+   East
+~
+~
+0 0 1018
+D2
+   South
+~
+~
+0 0 -1
+D3
+   West
+~
+~
+0 0 -1
+D4
+   Up
+~
+~
+0 0 -1
+D5
+   Down
+~
+~
+0 0 -1
+S
+#1018
+Restaurant at the Center of the Universe (center)~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North
+~
+~
+0 0 1014
+D1
+   East
+~
+~
+0 0 1019
+D2
+   South
+~
+~
+0 0 -1
+D3
+   West
+~
+~
+0 0 1017
+D4
+   Up
+~
+~
+0 0 -1
+D5
+   Down
+~
+~
+0 0 -1
+S
+#1019
+Restaurant at the Center of the Universe (right)~
    You are in an unfinished room.
 ~
 10 8 0 0 0 0
@@ -485,12 +587,12 @@ D2
    South
 ~
 ~
-0 0 1018
+0 0 -1
 D3
    West
 ~
 ~
-0 0 1014
+0 0 1018
 D4
    Up
 ~
@@ -502,8 +604,8 @@ D5
 ~
 0 0 -1
 S
-#1018
-Restaurant at the Center of the Universe~
+#1020
+Social Gathering Room (left)~
    You are in an unfinished room.
 ~
 10 8 0 0 0 0
@@ -511,22 +613,22 @@ D0
    North
 ~
 ~
-0 0 1014
+0 0 -1
 D1
    East
 ~
 ~
-0 0 1017
+0 0 1021
 D2
    South
 ~
 ~
-0 0 -1
+0 0 1015
 D3
    West
 ~
 ~
-0 0 1015
+0 0 -1
 D4
    Up
 ~
@@ -538,7 +640,79 @@ D5
 ~
 0 0 -1
 S
-#1019
+#1021
+Social Gathering Room (center)~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North
+~
+~
+0 0 -1
+D1
+   East
+~
+~
+0 0 1022
+D2
+   South
+~
+~
+0 0 1014
+D3
+   West
+~
+~
+0 0 1020
+D4
+   Up
+~
+~
+0 0 -1
+D5
+   Down
+~
+~
+0 0 -1
+S
+#1022
+Social Gathering Room (right)~
+   You are in an unfinished room.
+~
+10 8 0 0 0 0
+D0
+   North
+~
+~
+0 0 -1
+D1
+   East
+~
+~
+0 0 -1
+D2
+   South
+~
+~
+0 0 1016
+D3
+   West
+~
+~
+0 0 1021
+D4
+   Up
+~
+~
+0 0 -1
+D5
+   Down
+~
+~
+0 0 -1
+S
+#1023
 Fourth Level Stair Landing~
    You are in an unfinished room.
 ~
@@ -547,7 +721,7 @@ D0
    North
 ~
 ~
-0 0 1020
+0 0 1024
 D1
    East
 ~
@@ -574,7 +748,7 @@ D5
 ~
 0 0 -1
 S
-#1020
+#1024
 Admin Ice Box~
    You are in an unfinished room.
 ~
@@ -593,7 +767,7 @@ D2
    South
 ~
 ~
-0 0 1019
+0 0 1023
 D3
    West
 ~
