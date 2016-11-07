@@ -262,9 +262,9 @@ ceiling~
 ~
 E
 bank banks control controls station stations~
-   The bank of controls is several joined sections of lights, buttons, switches,
-levers and dials in mostly dark colors set off with the bright red and white 
-lights. It seems to run the Admins storage system.
+   The bank of controls is several joined sections of lights, buttons, switches
+and levers in mostly dark colors set off with the bright red and white lights. 
+It seems to run the Admins storage system.
 ~
 E
 desk~
@@ -272,7 +272,7 @@ desk~
 or other openings are evident.
 ~
 E
-light lights switch switches lever levers dial dials~
+light lights switch switches lever levers~
    All of the controls appear to be functional, but are in a locked state.
 ~
 S
@@ -341,10 +341,11 @@ E
 control controls station stations~
    There are several joined control stations flush with the eastern wall.
 The stations are made up of lights and buttons in bright blue and and green
-along with switches, levers and dials. They seem to run the Admin postal system.
+along with different types of switches and levers. They seem to run the Admin 
+postal system.
 ~
 E
-light lights switch switches lever levers dial dials~
+light lights switch switches lever levers~
    All of the controls appear to be functional, but are in a locked state.
 ~
 E
