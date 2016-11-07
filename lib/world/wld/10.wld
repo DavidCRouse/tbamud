@@ -1,5 +1,5 @@
 #1000
-The Central Tower's Zone Description Room~
+   The Central Tower's Zone Description Room~
 Builder      : Anyok
 Zone         : 10 The Central Tower
 Began        : March 1, 2015
@@ -170,7 +170,7 @@ lot of interior design in this galaxy, there are no railings.
 ~
 E
 wall walls~
-   The cylindrical walls are colored off-white with hidden indirect lightning 
+   The cylindrical wall is colored off-white with hidden indirect lightning 
 and ventilation ducts. At random internvals the plain walls are punctuated by 
 maintenance panels and sensor blocks. The number '2' is stenciled in a dark-
 blue sans-serif font on the northern side. 
@@ -222,8 +222,8 @@ D2
 ~
 0 0 -1
 D3
-   Along the western wall are control stations -- several joined sections of 
-screens, lights, switches, levers and dials in dark colors.
+   Along the western wall are dark grey control stations -- several joined 
+panels of lights, switches, levers and dials blocked out in groups.
 ~
 ~
 0 0 -1
@@ -244,7 +244,7 @@ either the locked or manually opening mode.
 ~
 E
 wall walls~
-   The cylindrical walls are colored off-white with hidden indirect lightning 
+   The curved walls are colored off-white with hidden indirect lightning 
 and ventilation ducts. At random internvals the plain walls have maintenance 
 panels and sensor blocks.
 ~
@@ -262,9 +262,9 @@ ceiling~
 ~
 E
 bank banks control controls station stations~
-   The bank of controls is several joined sections of screens, lights and 
-switches, levers and dials in dark colors. It seems to run the Admins storage 
-system.
+   The bank of controls is several joined sections of lights, buttons, switches,
+levers and dials in mostly dark colors set off with the bright red and white 
+lights. It seems to run the Admins storage system.
 ~
 E
 desk~
@@ -272,7 +272,7 @@ desk~
 or other openings are evident.
 ~
 E
-screen screens light lights switch switches lever levers dial dials~
+light lights switch switches lever levers dial dials~
    All of the controls appear to be functional, but are in a locked state.
 ~
 S
@@ -321,7 +321,7 @@ either the locked or manually opening mode.
 ~
 E
 wall walls~
-   The cylindrical walls are colored off-white with hidden indirect lightning 
+   The curved walls are colored off-white with hidden indirect lightning 
 and ventilation ducts. At random internvals the plain walls have maintenance 
 panels and sensor blocks.
 ~
@@ -340,11 +340,11 @@ ceiling~
 E
 control controls station stations~
    There are several joined control stations flush with the eastern wall.
-The stations are made up of screens, lights and switches, levers and dials in 
-dark colors. They seem to run the Admin postal system.
+The stations are made up of lights and buttons in bright blue and and green
+along with switches, levers and dials. They seem to run the Admin postal system.
 ~
 E
-screen screens light lights switch switches lever levers dial dials~
+light lights switch switches lever levers dial dials~
    All of the controls appear to be functional, but are in a locked state.
 ~
 E
@@ -404,7 +404,7 @@ lot of interior design in this galaxy, there are no railings.
 ~
 E
 wall walls~
-   The cylindrical walls are colored off-white with hidden indirect lightning 
+   The cylindrical wall is colored off-white with hidden indirect lightning 
 and ventilation ducts. At random internvals the plain walls are punctuated by 
 maintenance panels and sensor blocks. The number '2' is stenciled in a dark-
 blue sans-serif font on the northern side. 
