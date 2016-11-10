@@ -262,9 +262,8 @@ ceiling~
 ~
 E
 bank banks control controls station stations~
-   The bank of controls is several joined sections of lights, buttons, switches
-and levers in mostly dark colors set off with the bright red and white lights. 
-It seems to run the Admins storage system.
+   The bank of controls is several joined sections of buttons, switches
+and levers in mostly dark colors set off with the bright red and white lights.
 ~
 E
 desk~
@@ -272,7 +271,7 @@ desk~
 or other openings are evident.
 ~
 E
-light lights switch switches lever levers~
+light lights button buttons switch switches lever levers~
    All of the controls appear to be functional, but are in a locked state.
 ~
 S
@@ -341,11 +340,10 @@ E
 control controls station stations~
    There are several joined control stations flush with the eastern wall.
 The stations are made up of lights and buttons in bright blue and and green
-along with different types of switches and levers. They seem to run the Admin 
-postal system.
+along with different types of switches and levers.
 ~
 E
-light lights switch switches lever levers~
+light lights button buttons switch switches lever levers~
    All of the controls appear to be functional, but are in a locked state.
 ~
 E
@@ -427,39 +425,76 @@ stylized, typical of Pallington cluster interior design.
 S
 #1015
 Mortal Board Room~
-   You are in an unfinished room.
+   The room has squared off walls to the north, south and east, while the 
+western wall curves outwards. The room also contains a collection of padded 
+benches arranged in a rough circle in the center of the room.
 ~
 10 8 0 0 0 0
 D0
-   North
+   In the center of the northern wall is a standard auto-opening blast door.
 ~
 ~
 0 0 1020
 D1
-   East
+   The eastern wall has a a standard auto-opening blast door.
 ~
 ~
 0 0 1014
 D2
-   South
+   In the middle of the southern wall is a standard auto-opening blast door.
 ~
 ~
 0 0 1017
 D3
-   West
+   The western wall has a gentle outward curve.
 ~
 ~
 0 0 -1
 D4
-   Up
+   The ceiling is an almost seamless stretch of off-white. It looks like there 
+was a blaster strike in the south west corner, which has since been repaired.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+wall walls~
+   The walls are colored off-white with hidden indirect lightning and 
+ventilation ducts. At random internvals the plain walls have maintenance panels 
+and sensor blocks.
+~
+E
+maintenance sensor sensors block blocks~
+   The panels and sensor blocks are standard and seem functional but locked.
+~
+E
+floor floors~
+   The floor is set with white hexagon tiles with black grout.
+~
+E
+ceiling~
+   The ceiling is an almost seamless stretch of off-white. It looks like there 
+was a blaster strike in the south west corner, which has since been repaired.
+~
+E
+blast blaster strike~
+   It seems that the blaster bolt that skipped off the ceiling and left a burn 
+mark, was fired at an oblique angle.
+~
+E
+bench benches~
+   The benches are off-white, like most of the walls and furniture here, and are
+well-padded.
+~
 S
 #1016
 Immortal Board Room~
