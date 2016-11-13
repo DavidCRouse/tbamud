@@ -483,12 +483,12 @@ floor floors~
 E
 ceiling~
    The ceiling is an almost seamless stretch of off-white. It looks like there 
-was a blaster strike in the south west corner, which has since been repaired.
+is a repaired blaster strike in the south west corner.
 ~
 E
 blast blaster strike~
-   It seems that the blaster bolt that skipped off the ceiling and left a burn 
-mark, was fired at an oblique angle.
+   It looks like a blaster bolt skipped off the ceiling, leaving a burn mark,
+which was afterwards repaired.
 ~
 E
 bench benches~
@@ -498,39 +498,78 @@ well-padded.
 S
 #1016
 Immortal Board Room~
-   You are in an unfinished room.
+   This room's eastern wall curves outward, while the other walls are straight.
+The north, south and western walls have standard blast doors. In the middle of 
+the room is a multi-sectional circular sofa, which has a glass topped table at 
+the center.
 ~
 10 8 0 0 0 0
 D0
-   North
+   To the north is a standard blast door.
 ~
 ~
 0 0 1022
 D1
-   East
+   The outwardly curving eastern wall is unremarkable.
 ~
 ~
 0 0 -1
 D2
-   South
+   The southern wall has a standard auto-opening blast door.
 ~
 ~
 0 0 1019
 D3
-   West
+   The main feature of the western wall is a standard blast door.
 ~
 ~
 0 0 1014
 D4
-   Up
+   The ceiling is an almost seamless stretch of off-white.
 ~
 ~
 0 0 -1
 D5
-   Down
+The floor is set with white hexagon tiles with black grout. The style is 
+typical for colony administrative areas in the Pallington cluster.
 ~
 ~
 0 0 -1
+E
+blast door doors~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+wall walls~
+   The walls are colored off-white with hidden indirect lightning and 
+ventilation ducts. At random internvals the plain walls have maintenance panels 
+and sensor blocks.
+~
+E
+maintenance sensor sensors block blocks~
+   The panels and sensor blocks are standard and seem functional but locked.
+~
+E
+floor floors~
+   The floor is set with white hexagon tiles with black grout.
+~
+E
+ceiling~
+   The ceiling is an almost seamless stretch of off-white. It looks like there 
+was a blaster strike in the south west corner, which has since been repaired.
+~
+E
+sectional circular sofa~
+   The sofa sectionals face inwards to the table and leave enough room for a
+normal human to walk through from the outside of the circle and sit down.
+The sofa sectionals are off-white and well padded.
+~
+E
+glass table~
+   The table's top looks like frosted glass and is lit from underneath, almost 
+as it was built to display things -- like trophies or small antiques.
+~
 S
 #1017
 Restaurant at the Center of the Universe (left)~
