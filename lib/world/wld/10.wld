@@ -572,7 +572,7 @@ as it was built to display things -- like trophies or small antiques.
 ~
 S
 #1017
-Restaurant at the Center of the Universe (left)~
+RouseWorld Restaurant, Lounge~
    You are in an unfinished room.
 ~
 10 8 0 0 0 0
@@ -608,13 +608,12 @@ D5
 0 0 -1
 S
 #1018
-Restaurant at the Center of the Universe, Reception and Dining~
-   This tastefully dimly-lit area is the main section of the Restaurant at the 
-Center of the Universe. The ceiling over the whole area is a scalloped half-
-circle of white acoustic setfoam with scattered chandeliers. The floor is a 
-continuous stretch of high-grade synthetic marble. By the northern door is what 
-looks to be a very expensive and very heavy Maitre D' podium in energy-arc 
-carved hullmetal.
+RouseWorld Restaurant, Reception and Dining~
+   This tastefully dimly-lit area is the main section of the RouseWorld 
+Restaurant. The ceiling over the whole area is a scalloped half-circle of white 
+acoustic setfoam with scattered chandeliers. The floor is a continuous stretch 
+of high-grade synthetic marble. By the northern door is what looks to be a very 
+expensive and very heavy Maitre D' podium in energy-arc carved hullmetal.
 ~
 10 8 0 0 0 0
 D0
@@ -699,7 +698,7 @@ Obviously too heavy for an unassisted human to move.
 ~
 S
 #1019
-Restaurant at the Center of the Universe (right)~
+RouseWorld Restaurant, Bar~
    You are in an unfinished room.
 ~
 10 8 0 0 0 0
