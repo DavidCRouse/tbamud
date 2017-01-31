@@ -1,1 +1,47 @@
-$
+#1000
+McGuffin widget whatsit~
+a McGuffin~
+.The McGuffin lies abandoned.~
+~
+0 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+0 0 0 0 0
+E
+McGuffin widget whatsit~
+   The McGuffin has a strange appearance.
+~
+#1001
+pot plant~
+a potted plant~
+A potted plant, about four feet tall with many blue-green leaves, sits here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+150 45 5 0 0
+E
+pot~
+   The round pot holding the potted plant looks like it is made from blue stone 
+and has a stylized "R W" engraved on the side.
+~
+E
+plant~
+   The plant has several stalks with short branches filled with blue-green 
+leaves. The bottom of the stalks become thicker and more bulbous at the point
+where they enter the soil. At intervals, the stalks seem to move, even wihout
+a breeze to move them.
+~
+E
+stalk stalks~
+   At the top of the plant, the stalks are about the width of a pen, at the 
+base they are perhaps the size of two hands.
+~
+E
+leaf leaves~
+   The leaves of the potted plant are long and narrow. Mostly blue-green in 
+color, the leaves are also speckled with orange spots.
+~
+E
+spot spots orange~
+   The orange spots are small, less than the size of the tip of a pinky.
+~
+$~
