@@ -655,44 +655,44 @@ for a mining camp.
 0 0 -1
 E
 blast door doors:~
-This is a standard auto-opening blast door. It doesn't seem to be set to 
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
 either the locked or manually opening mode.
 ~
 E
 wall walls~
-The walls are colored with a gradient that goes from midnight blue at the bottom
-of the walls to nearly white by the ceiling.
+   The walls are colored with a gradient that goes from midnight blue at the 
+bottom of the walls to nearly white by the ceiling.
 ~
 E
 floor marble~
-The floor doesn't looked like it is tiled or fitted in sections.
+   The floor doesn't looked like it is tiled or fitted in sections.
 The whole thing must have been grown in a fab pond, which is a bit extravagant 
 for a mining camp.
 ~
 E
 ceiling scalloped scallop bivalve shell setfoam acoustic~
-The semi-circular ceiling over the whole restaurant area looks a bit like the 
-inside of a bivalve scallop shell, except for the northern side, where the 
+   The semi-circular ceiling over the whole restaurant area looks a bit like 
+the inside of a bivalve scallop shell, except for the northern side, where the 
 ceiling goes straight across. The chandliers have turquoise lights and green 
 fixtures, which were fashionable about 50 years ago in the Dallians system, 
 home of the Rouse Corporation.
 ~
 E
 chandeliers chandelier turquoise light lights fixture fixtures~
-The chandeliers are made from green colored duralumin with turquoise lights. 
+   The chandeliers are made from green colored duralumin with turquoise lights. 
 The arms seem to have arranged the lights in a star-field pattern, but it isn't 
 clear which star-field they might represent.
 ~
 E
 mural painting space battle ringed gas giant~
-The mural depicts a Tector-class Star Destroyer defending a merchant ship from 
-what looks like a Loronar strike cruiser converted to pirate ship. The gas giant
-might be Allianis, or Mithir, both look very similar.
+   The mural depicts a Tector-class Star Destroyer defending a merchant ship 
+from what looks like a Loronar strike cruiser converted to pirate ship. 
+The gas giant might be Allianis or Mithir, both look very similar.
 ~
 E
 maitre podium hullmetal~
-The Maitre D' podium is striking, if not really elegant. The piece looks as if 
-it was carved out of a solid block of black hullmetal with an energy-arc. 
+   The Maitre D' podium is striking, if not really elegant. The piece looks 
+as if it was carved out of a solid block of black hullmetal with an energy-arc. 
 It isn't perfectly square and there are some ragged corners. 
 Obviously too heavy for an unassisted human to move.
 ~
