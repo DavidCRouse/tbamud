@@ -8,5 +8,13 @@ R 0 1016 3098 -1 	(a holy bulletin board)
 O 0 3098 99 1016 	(a holy bulletin board)
 R 0 1018 1001 -1 	(a potted plant)
 O 0 1001 99 1018 	(a potted plant)
+R 0 1018 1002 -1 	(a circular booth)
+R 0 1018 1002 -1 	(a circular booth)
+R 0 1018 1002 -1 	(a circular booth)
+R 0 1018 1002 -1 	(a circular booth)
+O 0 1002 99 1018 	(a circular booth)
+O 0 1002 99 1018 	(a circular booth)
+O 0 1002 99 1018 	(a circular booth)
+O 0 1002 99 1018 	(a circular booth)
 S
 $

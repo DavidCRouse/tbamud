@@ -59,7 +59,7 @@ the Kerbstrex family crest.
 ~
 0 0 -1
 D5
-   The spiral staircase is made of polished but unpainted plast-steel, which 
+   The spiral staircase is made of polished but unfinished plast-steel, which 
 gives it an orange-brown color with a grain that resembles wood.
 ~
 ~
@@ -76,7 +76,7 @@ the Kerbstrex family crest.
 ~
 E
 staircase stair stairs~
-   The spiral staircase is made of polished but unpainted plast-steel, which 
+   The spiral staircase is made of polished but unfinished plast-steel, which 
 gives it an orange-brown color with a grain that resembles wood.
 ~
 E
@@ -164,7 +164,7 @@ D5
 0 0 1014
 E
 staircase stairs stair~
-   The open-air spiral staircase is made of polished but unpainted plast-steel, 
+   The open-air spiral staircase is made of polished but unfinished plast-steel, 
 which gives it an orange-brown color with a grain that resembles wood. Like a 
 lot of interior design in this galaxy, there are no railings.
 ~
@@ -397,7 +397,7 @@ D5
 0 0 1023
 E
 staircase stairs stair~
-   The open-air spiral staircase is made of polished but unpainted plast-steel, 
+   The open-air spiral staircase is made of polished but unfinished plast-steel, 
 which gives it an orange-brown color with a grain that resembles wood. Like a 
 lot of interior design in this galaxy, there are no railings.
 ~
@@ -573,39 +573,88 @@ as it was built to display things -- like trophies or small antiques.
 S
 #1017
 RouseWorld Restaurant, Lounge~
-   You are in an unfinished room.
+   Moodily lit with just a few scattered lightstands, this is the lounge area.
+of RouseWorld Restaurant. There are decorations scattered about, mostly semi-
+abstract statues of starships. Set into the curved wall running west to south 
+are several holoscreens. A variety of comfortable appearing chairs complete 
+the room.
 ~
 10 8 0 0 0 0
 D0
-   North
+   There is a standard blast door is centered along the straight north wall.
 ~
 ~
 0 0 1015
 D1
-   East
+   The dining room of RouseWorld Restaurant is to the east.
 ~
 ~
 0 0 1018
 D2
-   South
+   The southern wall and the western wall are both one smooth curve. The wall is
+colored with a gradient that goes from midnight blue at the bottom to nearly 
+white by the ceiling. Along the wall are several holoscreens.
 ~
 ~
 0 0 -1
 D3
-   West
+   The western wall and the southern wall are both one smooth curve. The wall is
+colored with a gradient that goes from midnight blue at the bottom to nearly 
+white by the ceiling. Along the wall are several holoscreens.
 ~
 ~
 0 0 -1
 D4
-   Up
+   A semi-circular ceiling is over the whole restaurant area. It looks a bit 
+like the inside of a bivalve scallop shell, except for the northern side, where
+the ceiling is cut straight across by the northern wall.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The carpet here is lush and is colored in abstract swirls of green and 
+turquoise.
 ~
 ~
 0 0 -1
+E
+lightstands lightstand~
+   The lightstands are slim columns of plast-steel about 5 feet tall, finished 
+with a matte silver surface with little decoration. Towards the top of the 
+stand, light is directed out of a series of slits. There is a reflector at the 
+top to direct the light mostly downwards.
+~
+E
+decorations decoration statues statue starships starship~
+   The starship statues are quite solid, but look liquid - like flowing quick-
+silver captured in time. Most are in a vertical orientation. Although they are 
+semi-abstract, they are recognizably older commercial starships from the 
+Pallington Cluster.
+~
+E
+holoscreens holoscreen landscape landscapes loops loop planets planet~
+   The holoscreens seem to be showing loops of landscapes from several different
+planets. The scenes show day and views, developed and wild, arid and lush. Most 
+loops last just a few seconds before repeating.
+~
+E
+carpet floor~
+   The carpet here is lush and is colored in abstract swirls of green and 
+turquoise.
+~
+E
+chair chairs~
+   Although most of the well-padded chairs seem designed for humans, there are 
+several that look to be suited for beings that are either taller, shorter or 
+have fewer or greater number of limbs than humans. The chairs are generally a 
+deep red, trimmed in gold.
+~
+E
+ceiling scalloped scallop bivalve shell~
+   The semi-circular ceiling over the whole restaurant area looks a bit like 
+the inside of a bivalve scallop shell, except for the northern side, where the 
+ceiling goes straight across.
+~
 S
 #1018
 RouseWorld Restaurant, Reception and Dining~
@@ -614,6 +663,7 @@ Restaurant. The ceiling over the whole area is a scalloped half-circle of white
 acoustic setfoam with scattered chandeliers. The floor is a continuous stretch 
 of high-grade synthetic marble. By the northern door is what looks to be a very 
 expensive and very heavy Maitre D' podium in energy-arc carved hullmetal.
+The south wall is dominated by a large mural.
 ~
 10 8 0 0 0 0
 D0
@@ -638,9 +688,9 @@ D3
 ~
 0 0 1017
 D4
-   The semi-circular ceiling over the whole restaurant area looks a bit like the 
+   The semi-circular ceiling over the whole restaurant area looks a bit like the
 inside of a bivalve scallop shell, except for the northern side, where the 
-ceiling is cut straight by the northern wall across. The chandliers have 
+ceiling is cut straight across by the northern wall. The chandliers have 
 turquoise lights and green fixtures, which were fashionable about 50 years 
 ago in the Dallians system, home of the Rouse Corporation.
 ~
