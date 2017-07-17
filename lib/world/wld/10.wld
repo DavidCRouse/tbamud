@@ -618,6 +618,11 @@ turquoise.
 ~
 0 0 -1
 E
+wall walls~
+   The walls are colored with a gradient that goes from midnight blue at the 
+bottom of the walls to nearly white by the ceiling.
+~
+E
 lightstands lightstand~
    The lightstands are slim columns of plast-steel about 5 feet tall, finished 
 with a matte silver surface with little decoration. Towards the top of the 
@@ -663,7 +668,8 @@ Restaurant. The ceiling over the whole area is a scalloped half-circle of white
 acoustic setfoam with scattered chandeliers. The floor is a continuous stretch 
 of high-grade synthetic marble. By the northern door is what looks to be a very 
 expensive and very heavy Maitre D' podium in energy-arc carved hullmetal.
-The south wall is dominated by a large mural.
+The south wall is dominated by a large mural. Arranged in this area are about 
+a dozen tables with chairs.
 ~
 10 8 0 0 0 0
 D0
@@ -678,7 +684,7 @@ D1
 0 0 1019
 D2
    To the south is a curved section of wall, dominated by a mural depicting a 
-space battle over a ringed gas giant.
+space battle over a ringed planet.
 ~
 ~
 0 0 -1
@@ -734,10 +740,10 @@ The arms seem to have arranged the lights in a star-field pattern, but it isn't
 clear which star-field they might represent.
 ~
 E
-mural painting space battle ringed gas giant~
+mural painting space battle ringed planet~
    The mural depicts a Tector-class Star Destroyer defending a merchant ship 
 from what looks like a Loronar strike cruiser converted to pirate ship. 
-The gas giant might be Allianis or Mithir, both look very similar.
+The planet might be Allianis or Mithir, both look very similar.
 ~
 E
 maitre podium hullmetal~
@@ -746,42 +752,118 @@ as if it was carved out of a solid block of black hullmetal with an energy-arc.
 It isn't perfectly square and there are some ragged corners. 
 Obviously too heavy for an unassisted human to move.
 ~
+E
+table tables~
+   While the table tops are a white stone-like material, the rest of the 
+furniture is made from narrow slats of a silvery metal, probably finished 
+plast-steel.
+~
+E
+chair chairs seat seats~
+   The chairs are made from a narrow slats of a silvery metal with blue 
+upholstery.
+~
 S
 #1019
 RouseWorld Restaurant, Bar~
-   You are in an unfinished room.
+   The bar section of RouseWorld Restaurant is a maze of small semi-circular 
+booths with a bar counter curving along the south east wall. A section of the 
+wall behind the bar is covered with a five meter ivory-like object.
 ~
 10 8 0 0 0 0
 D0
-   North
+   The north wall is straight and has a blast door in the center.
 ~
 ~
 0 0 1016
 D1
-   East
+   To the east and south, curving along with the wall, is a massive wooden bar 
+counter.
 ~
 ~
 0 0 -1
 D2
-   South
+   To the south and east, curving along with the wall, is a massive wooden bar 
+counter.
 ~
 ~
 0 0 -1
 D3
-   West
+   In the west is the dining section of the restaurant.
 ~
 ~
 0 0 1018
 D4
-   Up
+   A semi-circular ceiling is over the whole restaurant area. It looks a bit 
+like the inside of a bivalve scallop shell, except for the northern side, where
+the ceiling is cut straight across by the northern wall.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is a continuous stretch of high-grade synthetic marble
 ~
 ~
 0 0 -1
+E
+booth booths table tables~
+   The booths have a circular bench with a section cut out and a round table in 
+the center. The bench is covered in blue upholstery, the table is translucent 
+white and softly lit from underneath.
+~
+E
+bench upholstery~
+   The rich blue upholstery has a faint pattern on it, the letters 'R' and 'W.'
+~
+E
+bar counter~
+   The bar counter is massive and all wood, possibly wroshyr. It is finished in 
+a deep drown color and has some simple decorative flourishes. Behind the bar is 
+the usual selection of bottles, sinks and coolers - but also an unusual framed 
+five meter long section of what looks like ivory.
+~
+E
+ivory ivory-like five meter object~
+   Hung in a frame is a section of five meter by one meter ivory-like substance.
+According to the plaque on the frame it is a section of exogorth tooth. The 
+tooth, if that is what it is, is decorated in scrimshaw style with a scene of 
+freighters visiting a mining facility in the clouds of a gas giant. The object 
+is very worn, discolored and has a few cracks in it.
+~
+E
+plaque frame sign~
+   On the silvered-finished frame is a plaque that reads, "Scrimshaw on exogorth
+tooth, carved by junior engineer Edbr Fahey of the Selmur-8 minining facility on
+Tressk."
+~
+E
+scrimshaw scene~
+   The scene is drawn somewhat dark, as if at the open or close of the day or 
+perhaps the onset of a storm. The three freighters are partially hidden by 
+clouds, but the mining facility is caught as if in a beam of sunlight. At least 
+one of the freighters is clearly an old Wayfarer-class starship.
+~
+E
+ceiling scalloped scallop bivalve shell~
+   The semi-circular ceiling over the whole restaurant area looks a bit like 
+the inside of a bivalve scallop shell, except for the northern side, where the 
+ceiling goes straight across.
+~
+E
+blast door doors:~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+wall walls~
+   The walls are colored with a gradient that goes from midnight blue at the 
+bottom of the walls to nearly white by the ceiling.
+~
+E
+floor marble~
+   The floor doesn't looked like it is tiled or fitted in sections.
+The whole thing must have been grown in a fab pond.
+~
 S
 #1020
 Social Gathering Room (left)~
