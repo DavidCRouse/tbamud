@@ -83,6 +83,9 @@ int mana_gain(struct char_data *ch)
     case POS_SITTING:
       gain += (gain / 4);	/* Divide by 4 */
       break;
+     case POS_FIGHTING:
+      gain = 0;	/* No recovery of mana while fighting */
+      break;
     }
 
     if (IS_MAGIC_USER(ch) || IS_CLERIC(ch))
@@ -124,6 +127,9 @@ int hit_gain(struct char_data *ch)
     case POS_SITTING:
       gain += (gain / 8);	/* Divide by 8 */
       break;
+     case POS_FIGHTING:
+      gain = 0;	/* No recovery of HPs while fighting */
+      break;
     }
 
     if (IS_MAGIC_USER(ch) || IS_CLERIC(ch))
@@ -162,6 +168,9 @@ int move_gain(struct char_data *ch)
       break;
     case POS_SITTING:
       gain += (gain / 8);	/* Divide by 8 */
+      break;
+     case POS_FIGHTING:
+      gain = 0;	/* No recovery of move while fighting */
       break;
     }
 
