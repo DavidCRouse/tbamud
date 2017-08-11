@@ -772,7 +772,7 @@ wall behind the bar is covered with a five meter ivory-like object.
 ~
 10 8 0 0 0 0
 D0
-   The north wall is straight and has a blast door in the center.
+   The northern wall is straight and has a blast door in the center.
 ~
 ~
 0 0 1016
@@ -866,84 +866,168 @@ The whole thing must have been grown in a fab pond.
 ~
 S
 #1020
-Social Gathering Room (left)~
-   You are in an unfinished room.
+Social Gathering Room, western section~
+   This is the western section of a largish open room. There are a few standing
+tables with scattered circular padded benches. This section of the room is like 
+a quarter of a circle, the northern and western walls curve into the southern 
+wall which is straight and flat. Covering the curved section of wall are a 
+series of light blue drapes.
 ~
 10 8 0 0 0 0
 D0
-   North
+   The northern wall is covered, floor to ceiling, in a series of light blue 
+drapes. Each segment of drapes is about four feet wide.
 ~
 ~
 0 0 -1
 D1
-   East
+   To the east is the center section of the Social Gathering Room.
 ~
 ~
 0 0 1021
 D2
-   South
+   The southern wall is straight, colored off-white and has hidden indirect 
+lightning and ventilation ducts. At random intervals the plain wall has 
+maintenance panels and sensor blocks. There is a blast door in the center of the
+wall.
 ~
 ~
 0 0 1015
 D3
-   West
+   The western wall curves to the north and south and is covered in a series of
+light blue drapes that hang floor to ceiling. Each segment of drapes is about 
+four feet wide.
 ~
 ~
 0 0 -1
 D4
-   Up
+   The ceiling is off-white with scattered sensor clusters and maintenance 
+panels.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+table tables~
+   The table tops are a white stone-like material and the rest of the furniture
+is made from narrow slats of a silvery metal, probably finished plast-steel.
+~
+E
+bench benches~
+   The benches are an off-white color. They are well padded.
+~
+E
+drapes~
+   The drapes are a light fabric and colored light blue. The occasionally move 
+as the ventilation ducts circulate the air.
+~
+E
+doors door blast~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+sensor sensors cluster clusters~
+   These are standard building or ship interior sensor blocks.
+~
+E
+ventilation duct ducts~
+   These are standard building or ship ventilation ducts.
+~
+E
+panel panels maintenance~
+   These are standard building or ship maintenance panels.
+~
 S
 #1021
-Social Gathering Room (center)~
-   You are in an unfinished room.
+Social Gathering Room, center section~
+   This is the center section of a largish open room There are scattered 
+standing tables as well as groups of circular padded benches. The curved outer 
+wall is hung with a series of light blue drapes. The straight southern wall is
+more typical of the rest of the complex.
 ~
 10 8 0 0 0 0
 D0
-   North
+   The northern wall is covered in a series of light blue drapes that hang from 
+the ceiling down to the floor. Each segment of drapes is about four feet wide.
 ~
 ~
 0 0 -1
 D1
-   East
+   To the east is the eastern section of the Social Gathering Room.
 ~
 ~
 0 0 1022
 D2
-   South
+   The southern wall is off-white, straight, and has hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls have sensor blocks 
+and maintenance panels. There is a blast door in the center of the wall.
 ~
 ~
 0 0 1014
 D3
-   West
+   To the west is the western section of the Social Gathering Room.
 ~
 ~
 0 0 1020
 D4
-   Up
+   The ceiling is off-white with a few sensor clusters and maintenance panels.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+table tables~
+   The table tops are a white stone-like material and the rest of the furniture
+is made from narrow slats of a silvery metal, probably finished plast-steel.
+~
+E
+bench benches~
+   The benches are an off-white color. They are well padded.
+~
+E
+drapes~
+   The drapes are a light fabric and colored light blue. The occasionally move 
+as the ventilation ducts circulate the air.
+~
+E
+doors door blast~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+sensor sensors block blocks~
+   These are standard building or ship interior sensor clusters.
+~
+E
+ventilation duct ducts~
+   These are standard building or ship ventilation ducts.
+~
+E
+panel panels maintenance~
+   These are standard building or ship maintenance panels.
+~
 S
 #1022
-Social Gathering Room (right)~
-   You are in an unfinished room.
+Social Gathering Room, eastern section~
+   This is the eastern section of a largish open room. A few standing tables 
+are here along with some circular padded benches. This section of the room is 
+shaped like a quarter circle. The northern and eastern walls curve into the 
+southern wall which is straight and flat. Covering the curved section of wall 
+are a series of light blue drapes.
 ~
 10 8 0 0 0 0
 D0
-   North
+   The northern wall is covered, floor to ceiling, in segments of light blue 
+drapes. Each section of drapes is about four feet wide.
 ~
 ~
 0 0 -1
@@ -953,25 +1037,59 @@ D1
 ~
 0 0 -1
 D2
-   South
+   The southern wall is straight, colored off-white with ventilation ducts and 
+hidden indirect lightning. Dispersed along the wall are maintenance panels and 
+sensor blocks. There is a blast door in the center of the wall.
 ~
 ~
 0 0 1016
 D3
-   West
+   To the west is the center section of the Social Gathering Room.
 ~
 ~
 0 0 1021
 D4
-   Up
+   The ceiling is off-white with maintenance panels sensor clusters at irregular
+intervals.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is set with white hexagon tiles with black grout.
 ~
 ~
 0 0 -1
+E
+table tables~
+   The table tops are a white stone-like material and the rest of the furniture
+is made from narrow slats of a silvery metal, probably finished plast-steel.
+~
+E
+bench benches~
+   The benches are an off-white color. They are well padded.
+~
+E
+drapes~
+   The drapes are a light fabric and colored light blue. The occasionally move 
+as the ventilation ducts circulate the air.
+~
+E
+doors door blast~
+   This is a standard auto-opening blast door. It doesn't seem to be set to 
+either the locked or manually opening mode.
+~
+E
+sensor sensors cluster clusters~
+   These are standard building or ship interior sensor blocks.
+~
+E
+ventilation duct ducts~
+   These are standard building or ship ventilation ducts.
+~
+E
+panel panels maintenance~
+   These are standard building or ship maintenance panels.
+~
 S
 #1023
 Fourth Level Stair Landing~
