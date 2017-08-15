@@ -942,10 +942,16 @@ E
 panel panels maintenance~
    These are standard building or ship maintenance panels.
 ~
+E
+wall walls~
+   The western and northern walls are covered with drapes. The flat southern
+wall is colored off-white with hidden indirect lightning and ventilation ducts.
+At random internvals the plain walls have sensor blocks and maintenance panels.
+~
 S
 #1021
 Social Gathering Room, center section~
-   This is the center section of a largish open room There are scattered 
+   This is the center section of a largish open room. There are scattered 
 standing tables as well as groups of circular padded benches. The curved outer 
 wall is hung with a series of light blue drapes. The straight southern wall is
 more typical of the rest of the complex.
@@ -1014,6 +1020,12 @@ ventilation duct ducts~
 E
 panel panels maintenance~
    These are standard building or ship maintenance panels.
+~
+E
+wall walls~
+   The northern wall is covered with drapes. The southern wall is colored off-
+white with hidden indirect lightning and ventilation ducts. The plain wall has
+maintenance panels and sensor blocks at random intervals.
 ~
 S
 #1022
@@ -1089,6 +1101,12 @@ ventilation duct ducts~
 E
 panel panels maintenance~
    These are standard building or ship maintenance panels.
+~
+E
+wall walls~
+   The northern and eastern walls are covered with drapes. The southern wall is
+colored off-white with hidden indirect lightning and ventilation ducts. At 
+internvals the wall has maintenance panels and sensor blocks.
 ~
 S
 #1023
