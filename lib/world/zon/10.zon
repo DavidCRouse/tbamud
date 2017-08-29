@@ -8,5 +8,8 @@ R 0 1016 3098 -1 	(a holy bulletin board)
 O 0 3098 99 1016 	(a holy bulletin board)
 R 0 1018 1001 -1 	(a potted plant)
 O 0 1001 99 1018 	(a potted plant)
+D 0 1023 0 2 	    (Holding Cell door I)
+D 0 1024 2 2 	    (Holding Cell door II)
+M 0 1000 1 1021	    (Mouse Droid)
 S
 $

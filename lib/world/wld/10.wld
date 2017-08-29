@@ -1,4 +1,5 @@
 #1000
+   
 The Central Tower's Zone Description Room~
 Builder      : Anyok
 Zone         : 10 The Central Tower
@@ -126,8 +127,8 @@ maintenance sensor sensors block blocks~
 S
 #1011
 Second Level Stair Landing~
-   Here the stairs flatten out for a half-circle landing along the north side of
-the cylindrical wall. The north side of the wall has a stenciled number '2.' 
+   This small circular room is a landing for a spiral staircase that goes up and
+down from here. The north side of the wall has a stenciled number '2.' 
 On the landing are exits to the west and east.
 ~
 10 8 0 0 0 0
@@ -164,7 +165,7 @@ D5
 0 0 1014
 E
 staircase stairs stair~
-   The open-air spiral staircase is made of polished but unfinished plast-steel, 
+   The open-air spiral staircase is made of polished but unfinished plast-steel,
 which gives it an orange-brown color with a grain that resembles wood. Like a 
 lot of interior design in this galaxy, there are no railings.
 ~
@@ -193,7 +194,7 @@ either the locked or manually opening mode.
 ~
 E
 floor floors landing~
-   The floor here is plast-steel with the same finish as the stairs.
+   The floor here is a plast-steel with the same finish as the stairs.
 ~
 S
 #1012
@@ -359,9 +360,10 @@ Postal Service, as well as regulations and fees associated with those services.
 S
 #1014
 Third Level Stair Landing~
-   The stairs are interrupted by a full-circle landing. On the north side of the
-circular wall of the staircase is a stenciled number '3.' The landing has exits 
-to the north, south, east and west.
+   This small circular room is a landing for a spiral staircase that goes both 
+up and down from here. On the north side of the circular wall of the staircase 
+is a stenciled number '3.' The landing has exits to the north, south, east and 
+west.
 ~
 10 8 0 0 0 0
 D0
@@ -386,7 +388,7 @@ D3
 ~
 0 0 1015
 D4
-   The stairs spiral up to the higher levels
+   The stairs spiral up to the higher levels.
 ~
 ~
 0 0 1011
@@ -1110,75 +1112,137 @@ internvals the wall has maintenance panels and sensor blocks.
 ~
 S
 #1023
-Fourth Level Stair Landing~
-   You are in an unfinished room.
+Bottom of the stairs~
+   This is a small circular dark colored room with a spiral staircase that 
+leads up. On the wall to the north is a stenciled number '4.' There is a door 
+to the north has a sign that says "Holding Cell."
 ~
 10 8 0 0 0 0
 D0
-   North
+   To the north is a security model blast door with a sign above it that says 
+"Holding Cell."
 ~
-~
-0 0 1024
+door blast~
+2 -1 1024
 D1
-   East
+   The cylindrical wall is colored matte-black with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks.
 ~
 ~
 0 0 -1
 D2
-   South
+   The cylindrical wall is colored matte-black with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks.
 ~
 ~
 0 0 -1
 D3
-   West
+   The cylindrical wall is colored matte-black with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks.
 ~
 ~
 0 0 -1
 D4
-   Up
+   The stairs spiral up to the higher levels.
 ~
 ~
 0 0 1014
 D5
-   Down
+   The floor here is plast-steel with the same finish as the stairs.
 ~
 ~
 0 0 -1
+E
+staircase stairs stair~
+   The open-air spiral staircase is made of polished but unfinished plast-steel,
+which gives it an orange-brown color with a grain that resembles wood. Like a 
+lot of interior design in this galaxy, there are no railings.
+~
+E
+wall walls~
+   The cylindrical wall is colored matte-black with hidden indirect lightning 
+and ventilation ducts. At random internvals the plain walls are punctuated by 
+maintenance panels and sensor blocks. The number '4' is stenciled in a dark-
+blue sans-serif font on the northern side. 
+~
+E
+blast door security~
+   This is a security model blast door.
+~
+E
+floor floors landing~
+   The floor here is plast-steel with the same finish as the stairs.
+~
+E
+number 4 stencil~
+   The number '4' is stenciled in a dark-blue sans-serif font which is a bit
+stylized, typical of Pallington cluster interior design. 
+~
 S
 #1024
-Admin Ice Box~
-   You are in an unfinished room.
+Holding Cell~
+   This small room has matte-black walls and unfinished plast-steel grating for
+the floors and ceiling. Built into the northern wall is a small, narrow shelf,
+perhaps intended as a bed or bench.
 ~
 10 8 0 0 0 0
 D0
-   North
+   There is a bed or bench built into the northern wall. There is no padding,
+blankets or sheets. Both the walls and bed are matte-black.
 ~
 ~
 0 0 -1
 D1
-   East
+   The eastern wall is matte-black and featureless.
 ~
 ~
 0 0 -1
 D2
-   South
+   The southern wall has a security model blast door.
 ~
-~
-0 0 1023
+door blast~
+2 -1 1023
 D3
-   West
+   The western wall is matte-black and featureless.
 ~
 ~
 0 0 -1
 D4
-   Up
+   The ceiling has an unfinished plast-steel grating covering lighting modules
+and sensor blocks.
 ~
 ~
 0 0 -1
 D5
-   Down
+   The floor is made of unfinished plast-steel grating.
 ~
 ~
 0 0 -1
+E
+wall walls~
+   The walls are colored matte-black and are featureless.
+~
+E
+grate grating~
+   The grating in the floor and ceiling is made from unfinished plast-steel,
+which has an orange-brown color and a wood-like grain.
+~
+E
+floor floors~
+   The floor is made of unfinished plast-steel grating.
+~
+E
+ceiling ceilings~
+   The ceiling has an unfinished plast-steel grating covering lighting modules
+and sensor blocks.
+~
+E
+bench bed shelf~
+   The bed or bench built into the northern wall has no padding, blankets or 
+sheets.
+~
 S
 $~
