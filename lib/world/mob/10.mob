@@ -6,10 +6,11 @@ A MSE-6 droid is moving about, whistling and beeping to itself.
    This is a standard MSE-6 repair and messenger droid, a small black chassis on
 little wheels. A row of sensors are on its top front and top rear edges.
 ~
-140 0 0 0 2048 0 0 0 0 E
-1 20 5 1d1+0 1d1+0
-0 0
+204 0 0 0 2048 0 0 0 0 E
+1 20 5 0d0+10 1d2+0
+0 100
 8 8 0
 BareHandAttack: 1
 E
+T 1001
 $
