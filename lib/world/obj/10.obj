@@ -5,7 +5,7 @@ a McGuffin~
 ~
 0 0 0 0 0 a 0 0 0 0 0 0 0
 0 0 0 0
-0 0 0 0 0
+1 1 0 0 0
 E
 McGuffin widget whatsit~
    The McGuffin has a strange appearance.
@@ -19,18 +19,9 @@ A potted plant, about four feet tall with many blue-green leaves, sits here.~
 0 0 0 0
 150 45 5 0 0
 E
-spot spots orange~
-   The orange spots are small, less than the size of the tip of a pinky.
-~
-E
-leaf leaves~
-   The leaves of the potted plant are long and narrow. Mostly blue-green in 
-color, the leaves are also speckled with orange spots.
-~
-E
-stalk stalks~
-   At the top of the plant, the stalks are about the width of a pen, at the 
-base they are perhaps the size of two hands.
+pot~
+   The round pot holding the potted plant looks like it is made from blue stone 
+and has a stylized "R W" engraved on the side.
 ~
 E
 plant~
@@ -40,9 +31,18 @@ where they enter the soil. At intervals, the stalks seem to move, even wihout
 a breeze to move them.
 ~
 E
-pot~
-   The round pot holding the potted plant looks like it is made from blue stone 
-and has a stylized "R W" engraved on the side.
+stalk stalks~
+   At the top of the plant, the stalks are about the width of a pen, at the 
+base they are perhaps the size of two hands.
+~
+E
+leaf leaves~
+   The leaves of the potted plant are long and narrow. Mostly blue-green in 
+color, the leaves are also speckled with orange spots.
+~
+E
+spot spots orange~
+   The orange spots are small, less than the size of the tip of a pinky.
 ~
 #1002
 table booth~
@@ -53,13 +53,169 @@ A circular booth sits here.~
 4 0 0 0
 1000 750 8 0 0
 E
+bench upholstery~
+   The rich blue upholstery has a faint pattern on it, the letters 'R' and 'W.'
+~
+E
 table booth~
    The table is a freestanding, round booth. It has a circular bench with a 
 section cut out and a round table in the center. The bench is covered in blue 
 upholstery, the table is translucent white and softly lit from underneath.
 ~
+#1003
+tiny undamaged part~
+a tiny undamaged droid part~
+A tiny undamaged droid part is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 1 0 0 0
 E
-bench upholstery~
-   The rich blue upholstery has a faint pattern on it, the letters 'R' and 'W.'
+tiny undamaged part~
+   This tiny droid part is a port or manipulator protection ring or
+sleeve. Although undamaged, it probably isn't very valuable.
+~
+#1004
+small undamaged actuator part~
+a small undamaged droid actuator~
+A small undamaged droid actuator is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 2 0 0 0
+E
+small undamaged actuator part~
+   This is a small actuator part from a droid. If it really is undamaged it
+might be worth a little something.
+~
+#1005
+small undamaged manipulator part arm part~
+a small undamaged droid manipulator~
+A small undamaged droid manipulator arm is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 2 0 0 0
+E
+small undamaged manipulator arm part~
+   This small droid part is some kind of manipulator arm. If it really is
+undamaged is might be worth a little something.
+~
+#1006
+small undamaged sensor pod part~
+a small undamaged droid sensor~
+A small undamaged droid sensor pod is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 2 0 0 0
+E
+small undamaged sensor pod part~
+   This small droid part is some kind of sensor pod. If it really is
+undamaged is might be worth a little something.
+~
+#1007
+small undamaged logic module part~
+a small undamaged droid logic module~
+A small undamaged droid logic module is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+1 2 0 0 0
+E
+small undamaged logic module part~
+   This small droid part is some kind of logic module. If it really is
+undamaged is might be worth a little something.
+~
+#1008
+standard undamaged actuator part~
+a standard undamaged droid actuator~
+A standard undamaged droid actuator is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 15 0 0 0
+E
+standard undamaged actuator part~
+   This is a standard actuator part from a droid. If it really is undamaged it
+might be worth something.
+~
+#1009
+standard undamaged manipulator arm part~
+a standard undamaged droid manipulator~
+A standard undamaged droid manipulator arm is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 15 0 0 0
+E
+standard undamaged manipulator~
+   This standard droid part is some kind of manipulator arm. If it really
+is undamaged is might be worth something.
+~
+#1010
+standard undamaged sensor part pod~
+a standard undamaged droid sensor~
+A standard undamaged droid sensor pod is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 15 0 0 0
+E
+standard undamaged sensor pod part~
+   This standard droid part is some kind of sensor pod. If it really is
+undamaged is might be worth something.
+~
+#1011
+standard undamaged logic module part~
+a standard undamaged droid logic module~
+A standard undamaged droid logic module is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+5 15 0 0 0
+E
+standard undamaged logic module part~
+   This standard droid part is some kind of logic module. If it really is
+undamaged is might be worth something.
+~
+#1012
+large undamaged actuator part~
+a large undamaged droid actuator~
+A large undamaged droid actuator is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 40 0 0 0
+E
+large undamaged actuator part~
+   This is a large actuator part from a droid. If it really is undamaged it
+might be valuable.
+~
+#1013
+large undamaged manipulator arm part~
+a large undamaged droid manipulator~
+A large undamaged droid manipulator arm is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 40 0 0 0
+E
+large undamaged manipulator arm part~
+   This large droid part is some kind of manipulator arm. If it really is
+undamaged is might be valuable.
+~
+#1014
+large undamaged logic assembly part~
+a large undamaged droid logic assembly~
+A large undamaged droid logic assembly is lying here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0
+10 40 0 0 0
+E
+large undamaged logic assembly part~
+   This large droid part is some kind of logic assembly. If it really is
+undamaged is might be valuable.
 ~
 $~
