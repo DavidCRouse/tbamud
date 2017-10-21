@@ -558,8 +558,7 @@ floor floors~
 ~
 E
 ceiling~
-   The ceiling is an almost seamless stretch of off-white. It looks like there 
-was a blaster strike in the south west corner, which has since been repaired.
+   The ceiling is an almost seamless stretch of off-white.
 ~
 E
 sectional circular sofa~
@@ -575,7 +574,7 @@ as it was built to display things -- like trophies or small antiques.
 S
 #1017
 RouseWorld Restaurant, Lounge~
-   Moodily lit with just a few scattered lightstands, this is the lounge area.
+   Moodily lit with just a few scattered lightstands, this is the lounge area
 of RouseWorld Restaurant. There are decorations scattered about, mostly semi-
 abstract sculptures of starships. Set into the curved wall running west to south
 are several holoscreens. A variety of comfortable appearing chairs complete 
@@ -712,7 +711,7 @@ for a mining camp.
 ~
 0 0 -1
 E
-blast door doors:~
+blast door doors~
    This is a standard auto-opening blast door. It doesn't seem to be set to 
 either the locked or manually opening mode.
 ~
@@ -852,7 +851,7 @@ the inside of a bivalve scallop shell, except for the northern side, where the
 ceiling goes straight across.
 ~
 E
-blast door doors:~
+blast door doors~
    This is a standard auto-opening blast door. It doesn't seem to be set to 
 either the locked or manually opening mode.
 ~
