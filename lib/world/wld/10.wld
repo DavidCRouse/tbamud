@@ -769,7 +769,7 @@ S
 RouseWorld Restaurant, Bar~
    The bar section of RouseWorld Restaurant is a maze of small semi-circular 
 booths with a bar counter curving along the south east wall. A section of the 
-wall behind the bar is covered with a five meter ivory-like object.
+wall behind the bar is covered with a two-meter-long ivory-like object.
 ~
 10 8 0 0 0 0
 D0
@@ -821,11 +821,11 @@ bar counter~
    The bar counter is massive and all wood, possibly wroshyr. It is finished in 
 a deep drown color and has some simple decorative flourishes. Behind the bar is 
 the usual selection of bottles, sinks and coolers - but also an unusual framed 
-five meter long section of what looks like ivory.
+two-meter-long section of what looks like ivory.
 ~
 E
-ivory ivory-like five meter object tooth~
-   Hung in a frame is a section of five meter by one meter ivory-like substance.
+ivory ivory-like two meter object tooth section~
+   Hung in a frame is a section of ivory-like substance about two meters long.
 According to the plaque on the frame it is a section of exogorth tooth. The 
 tooth, if that is what it is, is decorated in scrimshaw style with a scene of 
 freighters visiting a mining facility in the clouds of a gas giant. The object 
@@ -834,7 +834,7 @@ is very worn, discolored and has a few cracks in it.
 E
 plaque frame sign~
    On the silvered-finished frame is a plaque that reads, "Scrimshaw on exogorth
-tooth, carved by junior engineer Edbr Fahey of the Selmur-8 minining facility on
+tooth, carved by junior engineer Edbr Fahey of the Selmur-8 mining facility on
 Tressk."
 ~
 E
