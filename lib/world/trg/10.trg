@@ -168,7 +168,7 @@ else
 done
 ~
 #1002
-Mouse Droid Emotes~
+RW - Mouse Droid Emotes~
 0 bg 50
 ~
 * Mobile Random - Little mouse droid actions and sounds, based on position
@@ -214,5 +214,101 @@ else
     * Things to do if not Standing or Fighting
     break
 end
+~
+#1003
+RW - Mob Morale Check on Death~
+0 f 100
+~
+* Run check on mob death, tally total mob levels versus PC levels and assign
+* probability of the remaining mobs fleeing. The levels of Mobs that aren't 
+* fighting should not be counted and they shouldn't be forced to flee.
+* Using code from the "while damage" example tigger to loop through the fight
+set room_var %actor.room%
+set target_char %room_var.people%
+set pclevels 0
+set moblevels 0
+set mobcount 0
+set runaway 0
+* Now loop through everyone fighting (and visible) to get MOB and PC total levels
+while %target_char%
+  * Set the next target before this one perhaps dies.
+  set tmp_target %target_char.next_in_room%
+  * PCs level totals
+  if %target_char.canbeseen% && %target_char.is_pc% && %target_char.fighting%
+    eval pclevels (%pclevels% + %target_char.level%)
+  * Mob level totals
+  elseif !%target_char.is_pc% && %target_char.fighting%
+    eval moblevels (%moblevels% + %target_char.level%)
+    eval mobcount (%mobcount% + 1)
+  end
+  * Set the next target.
+  set target_char %tmp_target%
+  * Loop back.
+done
+* Compare total mob levels fighting versus PC levels fighting to determine
+* if mobs will flee
+if (%moblevels% - %pclevels%) > 4
+  if %mobcount% > 1
+    %echo% Your foes seem confident they will defeat you!
+  else
+    %echo% Your foe seems confident they will defeat you!
+  end
+elseif ((%moblevels% - %pclevels%) >= 2) && ((%moblevels% - %pclevels%) <= 4)
+  if %mobcount% > 1
+    %echo% Your foes fight well.
+  else
+    %echo% Your foe fights well.
+  end
+elseif %moblevels% == 0
+  * They are all dead!
+elseif ((%moblevels% - %pclevels%) >= 0) && ((%moblevels% - %pclevels%) <= 1)
+  if %mobcount% > 1
+    %echo% You and your foes seem well matched.
+  else
+    %echo% You and your foe seem well matched.
+  end
+elseif ((%moblevels% - %pclevels%) <= -1) && ((%moblevels% - %pclevels%) >= -2)
+  switch %random.2%
+    case 1
+      * Time to bolt
+      set runaway 1
+      if %mobcount% > 1
+        %echo% Your foes cast grim glances at their fallen comrades.
+      else
+        %echo% Your foe casts grim glances at their fallen comrades.
+      end
+      break
+    case 2
+      * Maybe hang in one more round
+      if %mobcount% > 1
+        %echo% Your foes cast uneasy glances at their fallen comrades.
+      else
+        %echo% Your foe casts uneasy glances at their fallen comrades.
+      end
+      break
+    default
+      * Shouldn't reach
+  done
+elseif ((%moblevels% - %pclevels%) <= -3)
+  if %mobcount% > 1
+    %echo% Your foes seem panicked by your ferocity in combat!
+  else
+    %echo% Your foe seems panicked by your ferocity in combat!
+  end
+  set runaway 1
+end
+* Now we want to loop through the mobs again and tell the demoralized mobs to flee
+set room_var_2 %actor.room%
+set target_char_2 %room_var_2.people%
+while %target_char_2%
+  * Set the next target before this one perhaps dies.
+  set tmp_target_2 %target_char_2.next_in_room%
+    if !%target_char_2.is_pc% && %target_char_2.fighting% && %runaway% == 1
+      %force% %target_char_2% flee
+    end
+  * Set the next target.
+  set target_char_2 %tmp_target_2%
+  * Loop back.
+done
 ~
 $~
