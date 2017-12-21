@@ -1,7 +1,7 @@
 #3101
 Chat Trigger DR~
 0 d 1
-hello hey thanks weather eat meal drink sleep dump junk trash sewer who where what how a an the i and or me you~
+hello hey thanks weather eat meal drink sleep dump junk trash sewer who where what how a an the i and or me you *~
 * Specific, Random-ish and Random replies to PC's. NPC's can respond in limited way to each other
 * Mobile speech trigger, numeric argument 1 so will respond to any of the argument words
 * To try and ensure we get the NPC to respond, add "a an the i and or me you" to trigger arguments
@@ -61,6 +61,7 @@ set  txt[4] I guess?
 set  reply %%txt[%max%]%%
 eval reply %reply%
 say %reply%
+end
 end
 ~
 $~
