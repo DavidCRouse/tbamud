@@ -45,7 +45,6 @@ static void mob_log(char_data *mob, const char *format, ...)
 /* Macro to determine if a mob is permitted to use these commands. */
 #define MOB_OR_IMPL(ch) \
  ((IS_NPC(ch) && (!(ch)->desc || GET_LEVEL((ch)->desc->original) >= LVL_IMPL)) || (SCRIPT(ch) && TRIGGERS(SCRIPT(ch))))
-#define MOB_OR_PLAYER(ch) (GET_LEVEL(ch) > 0)
 
 /* mob commands */
 /* prints the argument to all the rooms aroud the mobile */
@@ -281,6 +280,28 @@ ACMD(do_mecho)
 
     sub_write(p, ch, TRUE, TO_ROOM);
     sub_write(p, ch, TRUE, TO_CHAR);
+}
+
+ACMD(do_mlog)
+{
+    char *p;
+
+    if (!MOB_OR_IMPL(ch)) {
+        send_to_char(ch, "%s", CONFIG_HUH);
+        return;
+    }
+
+    if (AFF_FLAGGED(ch, AFF_CHARM))
+        return;
+
+    if (!*argument)
+      return;
+
+    p = argument;
+    skip_spaces(&p);
+
+    mob_log(ch, p);
+
 }
 
 ACMD(do_mzoneecho)

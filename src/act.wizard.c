@@ -58,7 +58,7 @@ bool zedit_get_levels(struct descriptor_data *d, char *buf);
 /* Local Globals */
 static struct recent_player *recent_list = NULL;  /** Global list of recent players */
 
-int purge_room(room_rnum room)
+static int purge_room(room_rnum room)
 {
   int j;
   struct char_data *vict;
@@ -1211,7 +1211,7 @@ ACMD(do_switch)
   }
 }
 
-void do_cheat(struct char_data *ch)
+static void do_cheat(struct char_data *ch)
 {
   switch (GET_IDNUM(ch)) {
     case    1: // IMP
@@ -1792,7 +1792,7 @@ ACMD(do_date)
    last without arguments displays the last 10 entries.
    last with a name only displays the 'stock' last entry.
    last with a number displays that many entries (combines with name) */
-const char *last_array[11] = {
+static const char *last_array[11] = {
   "Connect",
   "Enter Game",
   "Reconnect",
@@ -1969,7 +1969,7 @@ void clean_llog_entries(void) {
 }
 
 /* debugging stuff, if you wanna see the whole file */
-void list_llog_entries(struct char_data *ch)
+static void list_llog_entries(struct char_data *ch)
 {
   FILE *fp;
   struct last_entry llast;
@@ -2783,7 +2783,7 @@ ACMD(do_show)
 #define RANGE(low, high) (value = MAX((low), MIN((high), (value))))
 
 /* The set options available */
-  struct set_struct {
+static struct set_struct {
     const char *cmd;
     const char level;
     const char pcnpc;
@@ -3228,7 +3228,6 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
       break;
     case 53: /* variable */
       return perform_set_dg_var(ch, vict, val_arg);
-      break;
     case 54: /* weight */
       GET_WEIGHT(vict) = value;
       affect_total(vict);
@@ -3276,7 +3275,7 @@ static int perform_set(struct char_data *ch, struct char_data *vict, int mode, c
   return (1);
 }
 
-void show_set_help(struct char_data *ch)
+static void show_set_help(struct char_data *ch)
 {
   const char *set_levels[] = {"Imm", "God", "GrGod", "IMP"};
   const char *set_targets[] = {"PC", "NPC", "BOTH"};
@@ -3464,7 +3463,7 @@ ACMD(do_links)
 
 /* Armor class limits*/
 #define TOTAL_WEAR_CHECKS  (NUM_ITEM_WEARS-2)  /*minus Wield and Take*/
-struct zcheck_armor {
+static struct zcheck_armor {
   bitvector_t bitvector;          /* from Structs.h                       */
   int ac_allowed;                 /* Max. AC allowed for this body part  */
   char *message;                  /* phrase for error message            */
@@ -3484,14 +3483,9 @@ struct zcheck_armor {
   {ITEM_WEAR_HOLD,   10, "Held item"}
 };
 
-/*These are strictly boolean*/
-#define CAN_WEAR_WEAPONS         0     /* toggle - can a weapon also be a piece of armor? */
-#define MAX_APPLIES_LIMIT        1     /* toggle - is there a limit at all?               */
-#define CHECK_ITEM_RENT          0     /* do we check for rent cost == 0 ?                */
-#define CHECK_ITEM_COST          0     /* do we check for item cost == 0 ?                */
 /* Applies limits !! Very Important:  Keep these in the same order as in Structs.h.
  * To ignore an apply, set max_aff to -99. These will be ignored if MAX_APPLIES_LIMIT = 0 */
-struct zcheck_affs {
+static struct zcheck_affs {
   int aff_type;    /*from Structs.h*/
   int min_aff;     /*min. allowed value*/
   int max_aff;     /*max. allowed value*/
@@ -3530,7 +3524,7 @@ struct zcheck_affs {
 
 /*room limits*/
 /* Off limit zones are any zones a player should NOT be able to walk to (ex. Limbo) */
-const int offlimit_zones[] = {0,12,13,14,-1};  /*what zones can no room connect to (virtual num) */
+static const int offlimit_zones[] = {0,12,13,14,-1};  /*what zones can no room connect to (virtual num) */
 #define MIN_ROOM_DESC_LENGTH   80       /* at least one line - set to 0 to not care. */
 #define MAX_COLOUMN_WIDTH      80       /* at most 80 chars per line */
 

@@ -352,7 +352,7 @@ static void qedit_disp_menu(struct descriptor_data *d)
   OLC_MODE(d) = QEDIT_MAIN_MENU;
 }
 /* For quest type.  */
-void qedit_disp_type_menu(struct descriptor_data *d)
+static void qedit_disp_type_menu(struct descriptor_data *d)
 {
   clear_screen(d);
   column_list(d->character, 0, quest_types, NUM_AQ_TYPES, TRUE);
@@ -360,7 +360,7 @@ void qedit_disp_type_menu(struct descriptor_data *d)
   OLC_MODE(d) = QEDIT_TYPES;
 }
 /* For quest flags.  */
-void qedit_disp_flag_menu(struct descriptor_data *d)
+static void qedit_disp_flag_menu(struct descriptor_data *d)
 {
   char bits[MAX_STRING_LENGTH];
 
@@ -407,7 +407,6 @@ void qedit_parse(struct descriptor_data *d, char *arg)
             "Invalid choice!\r\nDo you wish to save the quest? : ");
           return;
       }
-      break;
     /*-------------------------------------------------------------------*/
     case QEDIT_CONFIRM_DELETE:
       switch (*arg) {
@@ -433,7 +432,6 @@ void qedit_parse(struct descriptor_data *d, char *arg)
             "Invalid choice!\r\nDo you wish to delete the quest? : ");
           return;
       }
-      break;
 
     /*-------------------------------------------------------------------*/
     case QEDIT_MAIN_MENU:
@@ -747,3 +745,4 @@ void qedit_string_cleanup(struct descriptor_data *d, int terminator)
     break;
   }
 }
+

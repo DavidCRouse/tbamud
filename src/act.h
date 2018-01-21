@@ -162,11 +162,10 @@ ACMD(do_rest);
 ACMD(do_sit);
 ACMD(do_sleep);
 ACMD(do_stand);
+ACMD(do_unfollow);
 ACMD(do_wake);
 /* Global variables from act.movement.c */
-#ifndef __ACT_MOVEMENT_C__
 extern const char *cmd_door[];
-#endif /* __ACT_MOVEMENT_C__ */
 
 
 /*****************************************************************************
@@ -186,6 +185,7 @@ ACMD(do_kill);
 ACMD(do_order);
 ACMD(do_rescue);
 ACMD(do_whirlwind);
+ACMD(do_bandage);
 
 /*****************************************************************************
  * Begin Functions and defines for act.other.c

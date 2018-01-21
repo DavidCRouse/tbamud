@@ -15,15 +15,6 @@
 #include "protocol.h" /* Kavir Plugin*/
 #include "lists.h"
 
-/** Intended use of this macro is to allow external packages to work with a
- * variety of versions without modifications.  For instance, an IS_CORPSE()
- * macro was introduced in pl13.  Any future code add-ons could take into
- * account the version and supply their own definition for the macro if used
- * on an older version. You are supposed to compare this with the macro
- * TBAMUD_VERSION() in utils.h.
- * It is read as Major/Minor/Patchlevel - MMmmPP */
-#define _TBAMUD    0x030670
-
 /** If you want equipment to be automatically equipped to the same place
  * it was when players rented, set the define below to 1 because
  * TRUE/FALSE aren't defined yet. */

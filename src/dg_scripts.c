@@ -139,8 +139,8 @@ int trgvar_in_room(room_vnum vnum)
  * @param name Either the unique id of an object or a string identifying the
  * object. Note the unique id must be prefixed with UID_CHAR.
  * @param list The list of objects to look through.
- * @retval obj_data * Pointer to the object if it is found in the list of 
- * objects, NULL if the object is not found in the list. 
+ * @retval obj_data * Pointer to the object if it is found in the list of
+ * objects, NULL if the object is not found in the list.
  */
 obj_data *get_obj_in_list(char *name, obj_data *list)
 {
@@ -359,7 +359,7 @@ char_data *get_char(char *name)
  * @param obj An object that will constrain the search to the location that
  * the object is in *if* the name argument is not a unique id.
  * @param name Character name keyword to search for, or unique ID. Unique
- * id must be prefixed with UID_CHAR. 
+ * id must be prefixed with UID_CHAR.
  * @retval char_data * Pointer to the the char if found, NULL if not. Will
  * only find god characters if DG_ALLOW_GODS is on. */
 char_data *get_char_near_obj(obj_data *obj, char *name)
@@ -389,12 +389,13 @@ char_data *get_char_near_obj(obj_data *obj, char *name)
  * @param room A room that will constrain the search to that location 
  * *if* the name argument is not a unique id.
  * @param name Character name keyword to search for, or unique ID. Unique
- * id must be prefixed with UID_CHAR. 
+ * id must be prefixed with UID_CHAR.
  * @retval char_data * Pointer to the the char if found, NULL if not. Will
  * only find god characters if DG_ALLOW_GODS is on. */
 char_data *get_char_in_room(room_data *room, char *name)
 {
   char_data *ch;
+
 
   if (*name == UID_CHAR) {
     ch = find_char(atoi(name + 1));
@@ -417,7 +418,7 @@ char_data *get_char_in_room(room_data *room, char *name)
  * @param name The keyword of the object to search for. If 'self' or 'me'
  * are passed in as arguments, obj is returned. Can also be a unique object
  * id, and if so it must be prefixed with UID_CHAR.
- * @retval obj_data * Pointer to the object if found, NULL if not. */
+* @retval obj_data * Pointer to the object if found, NULL if not. */
 obj_data *get_obj_near_obj(obj_data *obj, char *name)
 {
   obj_data *i = NULL;
@@ -2958,7 +2959,7 @@ struct lookup_table_t {
   void * c;
   struct lookup_table_t *next;
 };
-struct lookup_table_t lookup_table[BUCKET_COUNT];
+static struct lookup_table_t lookup_table[BUCKET_COUNT];
 
 void init_lookup_table(void)
 {
@@ -3003,9 +3004,15 @@ void add_to_lookup_table(long uid, void *c)
   int bucket = (int) (uid & (BUCKET_COUNT - 1));
   struct lookup_table_t *lt = &lookup_table[bucket];
 
-  for (;lt->next; lt = lt->next)
-  if (lt->c == c && lt->uid == uid) {
-      log ("Add_to_lookup failed. Already there. (uid = %ld)", uid);
+  if (lt && lt->uid == uid) {
+   log("add_to_lookup updating existing value for uid=%ld (%p -> %p)", uid, lt->c, c);
+   lt->c = c;
+   return;
+  }
+
+  for (;lt && lt->next; lt = lt->next)
+    if (lt->next->uid == uid) {
+      log("add_to_lookup updating existing value for uid=%ld (%p -> %p)", uid, lt->next->c, c);
       return;
     }
 

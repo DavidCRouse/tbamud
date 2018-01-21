@@ -8,8 +8,6 @@
 *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
 **************************************************************************/
 
-#define __FIGHT_C__
-
 #include "conf.h"
 #include "sysdep.h"
 #include "structs.h"
@@ -253,6 +251,8 @@ void death_cry(struct char_data *ch)
 
 void raw_kill(struct char_data * ch, struct char_data * killer)
 {
+struct char_data *i;
+
   if (FIGHTING(ch))
     stop_fighting(ch);
 
@@ -268,8 +268,14 @@ void raw_kill(struct char_data * ch, struct char_data * killer)
   } else
     death_cry(ch);
 
-  if (killer)
-    autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
+  if (killer) {
+    if (killer->group) {
+      while ((i = (struct char_data *) simple_list(killer->group->members)) != NULL)
+        if(IN_ROOM(i) == IN_ROOM(ch)  || (world[IN_ROOM(i)].zone == world[IN_ROOM(ch)].zone))
+          autoquest_trigger_check(i, ch, NULL, AQ_MOB_KILL);      
+    } else
+        autoquest_trigger_check(killer, ch, NULL, AQ_MOB_KILL);
+  }
 
   /* Alert Group if Applicable */
   if (GROUP(ch))
@@ -924,8 +930,11 @@ void perform_violence(void)
       continue;
     }
 
-    if (GROUP(ch)) {
-      while ((tch = (struct char_data *) simple_list(GROUP(ch)->members)) != NULL) {
+ if (GROUP(ch) && GROUP(ch)->members && GROUP(ch)->members->iSize) {
+      struct iterator_data Iterator;
+
+      tch = (struct char_data *) merge_iterator(&Iterator, GROUP(ch)->members);
+    for (; tch ; tch = next_in_list(&Iterator)) {
         if (tch == ch)
           continue;
         if (!IS_NPC(tch) && !PRF_FLAGGED(tch, PRF_AUTOASSIST))

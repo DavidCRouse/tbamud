@@ -8,8 +8,6 @@
 *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
 **************************************************************************/
 
-#define __INTERPRETER_C__
-
 #include "conf.h"
 #include "sysdep.h"
 #include "structs.h"
@@ -105,6 +103,7 @@ cpp_extern const struct command_info cmd_info[] = {
 
   { "backstab" , "ba"      , POS_STANDING, do_backstab , 1, 0 },
   { "ban"      , "ban"     , POS_DEAD    , do_ban      , LVL_GRGOD, 0 },
+  { "bandage"  , "band"    , POS_RESTING , do_bandage  , 1, 0 },
   { "balance"  , "bal"     , POS_STANDING, do_not_here , 1, 0 },
   { "bash"     , "bas"     , POS_FIGHTING, do_bash     , 1, 0 },
   { "brief"    , "br"      , POS_DEAD    , do_gen_tog  , 0, SCMD_BRIEF },
@@ -325,6 +324,7 @@ cpp_extern const struct command_info cmd_info[] = {
   { "unlock"   , "unlock"  , POS_SITTING , do_gen_door , 0, SCMD_UNLOCK },
   { "unban"    , "unban"   , POS_DEAD    , do_unban    , LVL_GRGOD, 0 },
   { "unaffect" , "unaffect", POS_DEAD    , do_wizutil  , LVL_GOD, SCMD_UNAFFECT },
+  { "unfollow" , "unf"     , POS_RESTING , do_unfollow , 0, 0 },
   { "uptime"   , "uptime"  , POS_DEAD    , do_date     , LVL_GOD, SCMD_UPTIME },
   { "use"      , "use"     , POS_SITTING , do_use      , 1, SCMD_USE },
   { "users"    , "users"   , POS_DEAD    , do_users    , LVL_GOD, 0 },
@@ -368,7 +368,7 @@ cpp_extern const struct command_info cmd_info[] = {
 
   /* Thanks to Melzaren for this change to allow DG Scripts to be attachable
    *to player's while still disallowing them to manually use the DG-Commands. */
-  const struct mob_script_command_t mob_script_commands[] = {
+static const struct mob_script_command_t mob_script_commands[] = {
 
   /* DG trigger commands. minimum_level should be set to -1. */
   { "masound"  , do_masound  , 0 },
@@ -392,6 +392,7 @@ cpp_extern const struct command_info cmd_info[] = {
   { "mtransform", do_mtransform , 0 },
   { "mzoneecho", do_mzoneecho, 0 },
   { "mfollow"  , do_mfollow  , 0 },
+  { "mlog"     , do_mlog     , 0 },
   { "\n" , do_not_here , 0 } };
 
 int script_command_interpreter(struct char_data *ch, char *arg) {
@@ -420,7 +421,7 @@ int script_command_interpreter(struct char_data *ch, char *arg) {
   return 1; // We took care of execution. Let caller know.
 }
 
-const char *fill[] =
+static const char *fill[] =
 {
   "in",
   "from",
@@ -432,7 +433,7 @@ const char *fill[] =
   "\n"
 };
 
-const char *reserved[] =
+static const char *reserved[] =
 {
   "a",
   "an",
@@ -1354,7 +1355,6 @@ void nanny(struct descriptor_data *d, char *arg)
   case CON_GET_PROTOCOL:
     write_to_output(d, "Collecting Protocol Information... Please Wait.\r\n"); 
     return;
-  break;
   case CON_GET_NAME:		/* wait for input of name */
     if (d->character == NULL) {
       CREATE(d->character, struct char_data, 1);

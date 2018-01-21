@@ -8,8 +8,6 @@
 *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
 **************************************************************************/
 
-#define __DB_C__
-
 #include "conf.h"
 #include "sysdep.h"
 #include "structs.h"
@@ -114,8 +112,8 @@ struct help_index_element *help_table = NULL;
 struct social_messg *soc_mess_list = NULL;      /* list of socials */
 int top_of_socialt = -1;                        /* number of socials */
 
- time_t newsmod; /* Time news file was last modified. */
- time_t motdmod; /* Time motd file was last modified. */
+time_t newsmod; /* Time news file was last modified. */
+time_t motdmod; /* Time motd file was last modified. */
 
 struct time_info_data time_info;  /* the infomation about the time    */
 struct weather_data weather_info;	/* the infomation about the weather */
@@ -184,7 +182,7 @@ char *fread_action(FILE *fl, int nr)
   return (strdup(buf));
 }
 
-void boot_social_messages(void)
+static void boot_social_messages(void)
 {
   FILE *fl;
   int nr = 0, hide, min_char_pos, min_pos, min_lvl, curr_soc = -1, i;
@@ -1553,12 +1551,9 @@ static void parse_simple_mob(FILE *mob_f, int i, int nr)
  * assigns the correct value to the mob as appropriate.  Adding new e-specs is
  * absurdly easy -- just add a new CASE statement to this function! No other
  * changes need to be made anywhere in the code.
- * CASE		: Requires a parameter through 'value'.
- * BOOL_CASE	: Being specified at all is its value. */
+ * CASE		: Requires a parameter through 'value'. */
 #define CASE(test)	\
 	if (value && !matched && !str_cmp(keyword, test) && (matched = TRUE))
-#define BOOL_CASE(test)	\
-	if (!value && !matched && !str_cmp(keyword, test) && (matched = TRUE))
 #define RANGE(low, high)	\
 	(num_arg = MAX((low), MIN((high), (num_arg))))
 

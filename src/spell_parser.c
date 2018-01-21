@@ -8,8 +8,6 @@
 *  CircleMUD is based on DikuMUD, Copyright (C) 1990, 1991.               *
 **************************************************************************/
 
-#define __SPELL_PARSER_C__
-
 #include "conf.h"
 #include "sysdep.h"
 #include "structs.h"
@@ -958,5 +956,6 @@ void mag_assign_spells(void)
   skillo(SKILL_STEAL, "steal");
   skillo(SKILL_TRACK, "track");
   skillo(SKILL_WHIRLWIND, "whirlwind");
+  skillo(SKILL_BANDAGE, "bandage");
 }
 

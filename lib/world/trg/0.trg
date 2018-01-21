@@ -574,7 +574,7 @@ done
 ~
 #24
 Room While Teleport Example~
-2 b 100
+2 bg 100
 ~
 * By Rumble of The Builder Academy    tbamud.com 9091
 * Target the first person or mob in the room.
@@ -2067,13 +2067,16 @@ if %amount% >= 100
   end
   emote opens a concealed door.
   wait 1 sec
-  say thank you, step inside.
+  say Thank you, step inside.
   wait 2 sec
   %echoaround% %actor% %self.name% pushes %actor.name% through a concealed door.
   %send% %actor% %self.name% helps you through a concealed door.
   %teleport% %actor% 130
 else
-  say only %amount% coins, I don't think so.
+  if %amount% > 1
+    set s s
+  end
+  say Only %amount% coin%s%? I don't think so.
   give %amount% coin %actor.name%
 end
 ~
