@@ -793,12 +793,33 @@ ACMD(do_gold)
     send_to_char(ch, "You have %d gold coins.\r\n", GET_GOLD(ch));
 }
 
+/* Changes to score command to look nice and better readability -- drouse */
 ACMD(do_score)
 {
   struct time_info_data playing_time;
 
   if (IS_NPC(ch))
     return;
+
+/* This is the new section */
+
+  send_to_char(ch, "*--------------------------------------*---------------------------------------*");
+
+  send_to_char(ch, "%s %s (Level %d)      Alignment: %d ",
+	  GET_NAME(ch), GET_TITLE(ch), GET_LEVEL(ch)), GET_ALIGNMENT(ch));
+
+  if (IS_EVIL(ch)) {
+    send_to_char(ch, "(Evil)\r\n");
+  }
+  else if (IS_GOOD(ch)) {
+    send_to_char(ch, "(Good)\r\n");
+  } 
+  else
+    send_to_char(ch, "(Neutral)\r\n");
+
+  send_to_char(ch, "*--------------------------------------*---------------------------------------*");
+
+/* End of the new section */
 
   send_to_char(ch, "You are %d years old.", GET_AGE(ch));
 
