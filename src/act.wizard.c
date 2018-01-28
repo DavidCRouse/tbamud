@@ -1584,11 +1584,11 @@ ACMD(do_restore)
           SET_SKILL(vict, i, 100);
 
       if (GET_LEVEL(vict) >= LVL_GRGOD) {
-	vict->real_abils.str_add = 100;
+	vict->real_abils.str_add = 0;
 	vict->real_abils.intel = 25;
 	vict->real_abils.wis = 25;
 	vict->real_abils.dex = 25;
-	vict->real_abils.str = 18;
+	vict->real_abils.str = 25;
 	vict->real_abils.con = 25;
 	vict->real_abils.cha = 25;
       }
