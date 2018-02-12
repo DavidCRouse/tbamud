@@ -933,7 +933,7 @@ ACMD(do_score)
     GET_MOVE(ch), GET_MAX_MOVE(ch));
 
   if (GET_ADD(ch) > 0) {
-    send_to_char(ch, "          Strength:%11d/%2d                    Intelligence:%3d\r\n",
+    send_to_char(ch, "          Strength:%11d/%2d                     Intelligence:%3d\r\n",
       GET_STR(ch), GET_ADD(ch), GET_INT(ch));
     send_to_char(ch, "          Dexterity:%10d                        Wisdom:%9d\r\n",
       GET_DEX(ch), GET_WIS(ch));
