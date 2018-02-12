@@ -28,6 +28,7 @@
 #include "modify.h"
 #include "asciimap.h"
 #include "quest.h"
+#include "spec_procs.h"   /**< For the new do_score command */
 
 /* prototypes of local functions */
 /* do_diagnose utility functions */
@@ -793,6 +794,7 @@ ACMD(do_gold)
     send_to_char(ch, "You have %d gold coins.\r\n", GET_GOLD(ch));
 }
 
+/* Changes to score command to look nicer and (hopefully) better readability -- drouse */
 ACMD(do_score)
 {
   struct time_info_data playing_time;
@@ -800,51 +802,35 @@ ACMD(do_score)
   if (IS_NPC(ch))
     return;
 
-  send_to_char(ch, "You are %d years old.", GET_AGE(ch));
+/* Header */
+  send_to_char(ch, "*--------------------------------------*---------------------------------------*\r\n\r\n");
+
+  send_to_char(ch, "You are: %s %s (Level %d)",
+    GET_NAME(ch), GET_TITLE(ch), GET_LEVEL(ch));
+
+  if (IS_EVIL(ch)) {
+    send_to_char(ch, "%20s%6d%7s\r\n",
+      "Alignment:", GET_ALIGNMENT(ch), "(Evil)");
+  }
+  else if (IS_GOOD(ch)) {
+    send_to_char(ch, "%20s%5d%7s\r\n",
+      "Alignment:", GET_ALIGNMENT(ch), "(Good)");
+  } 
+  else
+    send_to_char(ch, "%20s%5d%10s\r\n",
+      "Alignment:", GET_ALIGNMENT(ch), "(Neutral)");
+
+  send_to_char(ch, "You are %d years old", GET_AGE(ch));
 
   if (age(ch)->month == 0 && age(ch)->day == 0)
-    send_to_char(ch, "  It's your birthday today.\r\n");
+    send_to_char(ch, ", it's your birthday today.\r\n");
   else
-    send_to_char(ch, "\r\n");
-
-  send_to_char(ch, "You have %d(%d) hit, %d(%d) mana and %d(%d) movement points.\r\n",
-	  GET_HIT(ch), GET_MAX_HIT(ch), GET_MANA(ch), GET_MAX_MANA(ch),
-	  GET_MOVE(ch), GET_MAX_MOVE(ch));
-
-  send_to_char(ch, "Your armor class is %d, and your alignment is %d.\r\n",
-	  (compute_armor_class(ch) / 10), GET_ALIGNMENT(ch));
-
-  send_to_char(ch, "You have %d exp, %d gold coins, and %d questpoints.\r\n",
-	  GET_EXP(ch), GET_GOLD(ch), GET_QUESTPOINTS(ch));
-
-  if (GET_LEVEL(ch) < LVL_IMMORT)
-    send_to_char(ch, "You need %d exp to reach your next level.\r\n",
-	level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch));
-
-  send_to_char(ch, "You have earned %d quest points.\r\n", GET_QUESTPOINTS(ch));
-  send_to_char(ch, "You have completed %d quest%s, ",
-       GET_NUM_QUESTS(ch),
-       GET_NUM_QUESTS(ch) == 1 ? "" : "s");
-  if (GET_QUEST(ch) == NOTHING)
-    send_to_char(ch, "and you are not on a quest at the moment.\r\n");
-  else
-  {
-    send_to_char(ch, "and your current quest is: %s", QST_NAME(real_quest(GET_QUEST(ch))));
-
-    if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
-        send_to_char(ch, " [%d]\r\n", GET_QUEST(ch));
-    else
-        send_to_char(ch, "\r\n");
-  }
-
+    send_to_char(ch, ".\r\n");
   playing_time = *real_time_passed((time(0) - ch->player.time.logon) +
-				  ch->player.time.played, 0);
+    ch->player.time.played, 0);
   send_to_char(ch, "You have been playing for %d day%s and %d hour%s.\r\n",
      playing_time.day, playing_time.day == 1 ? "" : "s",
      playing_time.hours, playing_time.hours == 1 ? "" : "s");
-
-  send_to_char(ch, "This ranks you as %s %s (level %d).\r\n",
-	  GET_NAME(ch), GET_TITLE(ch), GET_LEVEL(ch));
 
   switch (GET_POS(ch)) {
   case POS_DEAD:
@@ -934,6 +920,70 @@ ACMD(do_score)
     send_to_char(ch, "Your current zone: %s%d%s\r\n", CCCYN(ch, C_NRM), GET_OLC_ZONE(ch),
  CCNRM(ch, C_NRM));
   }
+
+  send_to_char(ch, "\r\n");
+
+  send_to_char(ch, "          Armor Class:%8d\r\n",
+    (compute_armor_class(ch) / 10));
+  send_to_char(ch, "          Hit Points:%9d (Out of %3d)\r\n\r\n",
+    GET_HIT(ch), GET_MAX_HIT(ch));
+  send_to_char(ch, "          Mana:%15d (Out of %3d)\r\n",
+    GET_MANA(ch), GET_MAX_MANA(ch));
+  send_to_char(ch, "          Movement Points:%4d (Out of %3d)\r\n\r\n",
+    GET_MOVE(ch), GET_MAX_MOVE(ch));
+
+  if (GET_ADD(ch) > 0) {
+    send_to_char(ch, "          Strength:%11d/%2d                    Intelligence:%3d\r\n",
+      GET_STR(ch), GET_ADD(ch), GET_INT(ch));
+    send_to_char(ch, "          Dexterity:%10d                        Wisdom:%9d\r\n",
+      GET_DEX(ch), GET_WIS(ch));
+    send_to_char(ch, "          Constitution:%7d                        Charisma:%7d\r\n\r\n",
+      GET_CON(ch), GET_CHA(ch));
+    }
+  else {
+    send_to_char(ch, "          Strength:%11d                        Intelligence:%3d\r\n",
+      GET_STR(ch), GET_INT(ch));
+    send_to_char(ch, "          Dexterity:%10d                        Wisdom:%9d\r\n",
+      GET_DEX(ch), GET_WIS(ch));
+    send_to_char(ch, "          Constitution:%7d                        Charisma:%7d\r\n\r\n",
+      GET_CON(ch), GET_CHA(ch));
+  }
+  
+/* Section Break */
+  send_to_char(ch, "          -----------------------------*------------------------------          \r\n\r\n");
+  
+  send_to_char(ch, "Experience Points: %d\r\n", GET_EXP(ch));
+  if (GET_LEVEL(ch) < LVL_IMMORT)
+    send_to_char(ch, "You need %d exp to reach your next level.\r\n\r\n",
+      level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch));
+  else send_to_char(ch, "\r\n");
+  
+  send_to_char(ch, "Quest Points: %d\r\n", GET_QUESTPOINTS(ch));
+  send_to_char(ch, "You have completed %d quest%s, ",
+       GET_NUM_QUESTS(ch),
+       GET_NUM_QUESTS(ch) == 1 ? "" : "s");
+  if (GET_QUEST(ch) == NOTHING)
+    send_to_char(ch, "and you are not on a quest at the moment.\r\n\r\n");
+  else {
+    send_to_char(ch, "and your current quest is: %s", QST_NAME(real_quest(GET_QUEST(ch))));
+
+    if (!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_SHOWVNUMS))
+        send_to_char(ch, " [%d]\r\n\r\n", GET_QUEST(ch));
+    else
+        send_to_char(ch, "\r\n\r\n");
+  }
+  
+  send_to_char(ch, "You have %d gold coins\r\n\r\n", GET_GOLD(ch));
+
+/* Section Break */
+  send_to_char(ch, "          -----------------------------*------------------------------          \r\n\r\n");
+  
+  list_skills(ch);
+  
+  send_to_char(ch, "\r\n");
+
+/* Footer */
+/* Because of pagination, can't really use footers */
 }
 
 ACMD(do_inventory)
