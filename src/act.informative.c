@@ -809,15 +809,15 @@ ACMD(do_score)
     GET_NAME(ch), GET_TITLE(ch), GET_LEVEL(ch));
 
   if (IS_EVIL(ch)) {
-    send_to_char(ch, "%20s%6d%7s\r\n",
+    send_to_char(ch, "%20s%7s%7s\r\n",
       "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Evil)");
   }
   else if (IS_GOOD(ch)) {
-    send_to_char(ch, "%20s%5s%7s\r\n",
+    send_to_char(ch, "%20s%6s%7s\r\n",
       "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Good)");
   } 
   else
-    send_to_char(ch, "%20s%5d%10s\r\n",
+    send_to_char(ch, "%20s%6s%10s\r\n",
       "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Neutral)");
 
   send_to_char(ch, "You are %d years old", GET_AGE(ch));
