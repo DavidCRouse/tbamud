@@ -791,7 +791,7 @@ ACMD(do_gold)
   else if (GET_GOLD(ch) == 1)
     send_to_char(ch, "You have one miserable little gold coin.\r\n");
   else
-    send_to_char(ch, "You have %d gold coins.\r\n", GET_GOLD(ch));
+    send_to_char(ch, "You have %s gold coins.\r\n", add_commas(GET_GOLD(ch)));
 }
 
 /* Changes to score command to look nicer and (hopefully) better readability -- drouse */
@@ -810,15 +810,15 @@ ACMD(do_score)
 
   if (IS_EVIL(ch)) {
     send_to_char(ch, "%20s%6d%7s\r\n",
-      "Alignment:", GET_ALIGNMENT(ch), "(Evil)");
+      "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Evil)");
   }
   else if (IS_GOOD(ch)) {
-    send_to_char(ch, "%20s%5d%7s\r\n",
-      "Alignment:", GET_ALIGNMENT(ch), "(Good)");
+    send_to_char(ch, "%20s%5s%7s\r\n",
+      "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Good)");
   } 
   else
     send_to_char(ch, "%20s%5d%10s\r\n",
-      "Alignment:", GET_ALIGNMENT(ch), "(Neutral)");
+      "Alignment:", add_commas(GET_ALIGNMENT(ch)), "(Neutral)");
 
   send_to_char(ch, "You are %d years old", GET_AGE(ch));
 
@@ -973,7 +973,7 @@ ACMD(do_score)
         send_to_char(ch, "\r\n\r\n");
   }
   
-  send_to_char(ch, "You have %d gold coins\r\n\r\n", GET_GOLD(ch));
+  send_to_char(ch, "You have %s gold coins\r\n\r\n", add_commas(GET_GOLD(ch)));
 
 /* Section Break */
   send_to_char(ch, "          -----------------------------*------------------------------          \r\n\r\n");
