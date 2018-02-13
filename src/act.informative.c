@@ -952,10 +952,10 @@ ACMD(do_score)
 /* Section Break */
   send_to_char(ch, "          -----------------------------*------------------------------          \r\n\r\n");
   
-  send_to_char(ch, "Experience Points: %d\r\n", GET_EXP(ch));
+  send_to_char(ch, "Experience Points: %s\r\n", add_commas(GET_EXP(ch)));
   if (GET_LEVEL(ch) < LVL_IMMORT)
-    send_to_char(ch, "You need %d exp to reach your next level.\r\n\r\n",
-      level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch));
+    send_to_char(ch, "You need %s exp to reach your next level.\r\n\r\n",
+      add_commas(level_exp(GET_CLASS(ch), GET_LEVEL(ch) + 1) - GET_EXP(ch)));
   else send_to_char(ch, "\r\n");
   
   send_to_char(ch, "Quest Points: %d\r\n", GET_QUESTPOINTS(ch));
