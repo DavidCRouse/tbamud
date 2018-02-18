@@ -661,7 +661,7 @@ SPECIAL(bank)
 
   if (CMD_IS("balance")) {
     if (GET_BANK_GOLD(ch) > 0)
-      send_to_char(ch, "Your current balance is %d coins.\r\n", GET_BANK_GOLD(ch));
+      send_to_char(ch, "Your current balance is %s coins.\r\n", add_commas(GET_BANK_GOLD(ch)));
     else
       send_to_char(ch, "You currently have no money deposited.\r\n");
     return (TRUE);
@@ -676,7 +676,7 @@ SPECIAL(bank)
     }
     decrease_gold(ch, amount);
 	increase_bank(ch, amount);
-    send_to_char(ch, "You deposit %d coins.\r\n", amount);
+    send_to_char(ch, "You deposit %s coins.\r\n", add_commas(amount));
     act("$n makes a bank transaction.", TRUE, ch, 0, FALSE, TO_ROOM);
     return (TRUE);
   } else if (CMD_IS("withdraw")) {
@@ -690,7 +690,7 @@ SPECIAL(bank)
     }
     increase_gold(ch, amount);
 	decrease_bank(ch, amount);
-    send_to_char(ch, "You withdraw %d coins.\r\n", amount);
+    send_to_char(ch, "You withdraw %s coins.\r\n", add_commas(amount));
     act("$n makes a bank transaction.", TRUE, ch, 0, FALSE, TO_ROOM);
     return (TRUE);
   } else
