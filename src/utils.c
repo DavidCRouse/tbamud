@@ -1483,6 +1483,7 @@ int get_class_by_name(char *classname)
     return (-1);
 }
 
+/* From AetasMUD (https://github.com/AetasMUD/AetasMUD/), utility function to add commas to numbers */
 char * convert_from_tabs(char * string)
 {
   static char buf[MAX_STRING_LENGTH * 8];
@@ -1490,4 +1491,35 @@ char * convert_from_tabs(char * string)
   strcpy(buf, string);
   parse_tab(buf);
   return(buf);
+}
+
+char *add_commas(long long num)
+{
+  #define DIGITS_PER_GROUP      3
+  #define BUFFER_COUNT         10
+  #define DIGITS_PER_BUFFER    16
+
+  int i, j, len, negative = (num < 0);
+  char num_string[DIGITS_PER_BUFFER];
+  static char comma_string[BUFFER_COUNT][DIGITS_PER_BUFFER];
+  static int which = 0;
+
+  sprintf(num_string, "%Ld", num);
+  len = strlen(num_string);
+
+  for (i = j = 0; num_string[i]; ++i) {
+    if ((len - i) % DIGITS_PER_GROUP == 0 && i && i - negative)
+      comma_string[which][j++] = ',';
+    comma_string[which][j++] = num_string[i];
+  }
+  comma_string[which][j] = '\0';
+
+  i = which;
+  which = (which + 1) % BUFFER_COUNT;
+
+  return comma_string[i];
+
+  #undef DIGITS_PER_GROUP
+  #undef BUFFER_COUNT
+  #undef DIGITS_PER_BUFFER
 }
