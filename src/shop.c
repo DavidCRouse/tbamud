@@ -831,7 +831,7 @@ static void shopping_value(char *arg, struct char_data *ch, struct char_data *ke
   if (!(obj = get_selling_obj(ch, name, keeper, shop_nr, TRUE)))
     return;
 
-  snprintf(buf, sizeof(buf), "%s I'll give you %d gold coins for that!", GET_NAME(ch), sell_price(obj, shop_nr, keeper, ch));
+  snprintf(buf, sizeof(buf), "%s I'll give you %s gold coins for that!", GET_NAME(ch), add_commas(sell_price(obj, shop_nr, keeper, ch)));
   do_tell(keeper, buf, cmd_tell, 0);
 }
 
@@ -844,7 +844,7 @@ static char *list_object(struct obj_data *obj, int cnt, int aindex, int shop_nr,
   if (shop_producing(obj, shop_nr))
     strcpy(quantity, "Unlimited");	/* strcpy: OK (for 'quantity >= 10') */
   else
-    sprintf(quantity, "%d", cnt);	/* sprintf: OK (for 'quantity >= 11', 32-bit int) */
+    sprintf(quantity, "%s", add_commas(cnt));	/* sprintf: OK (for 'quantity >= 11', 32-bit int) */
 
   switch (GET_OBJ_TYPE(obj)) {
   case ITEM_DRINKCON:
@@ -866,9 +866,9 @@ static char *list_object(struct obj_data *obj, int cnt, int aindex, int shop_nr,
   }
   CAP(itemname);
 
-  snprintf(result, sizeof(result), " %2d)  %9s   %-*s %6d%s\r\n",
+  snprintf(result, sizeof(result), " %2d)  %9s   %-*s %6s%s\r\n",
       aindex, quantity, count_color_chars(itemname)+48, itemname,
-      buy_price(obj, shop_nr, keeper, ch), OBJ_FLAGGED(obj, ITEM_QUEST) ? " qp" : "");
+      add_commas(buy_price(obj, shop_nr, keeper, ch)), OBJ_FLAGGED(obj, ITEM_QUEST) ? " qp" : "");
 
   return (result);
 }
