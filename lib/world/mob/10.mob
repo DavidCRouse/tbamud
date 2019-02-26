@@ -14,4 +14,76 @@ BareHandAttack: 1
 E
 T 1001
 T 1002
+#1012
+receptionist innkeeper droid~
+the receptionist droid~
+The receptionist droid stands here.
+~
+It looks unfinished.
+~
+10 0 0 0 0 0 0 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+T 1001
+T 1005
+#1013
+postmaster droid~
+the postmaster droid~
+The postmaster droid stands here.
+~
+It looks unfinished.
+~
+10 0 0 0 0 0 0 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+T 1001
+T 1005
+#1018
+waiter droid~
+the waiter droid~
+A waiter droid stands here
+~
+It looks unfinished.
+~
+10 0 0 0 0 0 0 0 0 E
+0 20 10 1d1+0 1d1+0
+0 0
+8 8 0
+E
+T 1001
+T 1005
+#1019
+treadwell wed-15 bartender droid~
+the older Treadwell droid~
+An older Treadwell droid is here.
+~
+   This is an older Treadwell WED-15 droid, with a wide green base, tracked
+wheels and an extendable central stalk with a binocular vision wedge on top.  
+Also coming from the base are an array of manipulator arms, many of which seem
+to have bartender tools at the end -- a corkscrew, measuring jigs, etc.  It also
+has a voice module attached haphazardly to its central stalk.
+~
+57354 0 0 0 2112 0 0 0 0 E
+24 12 -4 4d4+240 4d4+4
+240 57600
+8 8 0
+BareHandAttack: 8
+Str: 16
+Dex: 16
+Int: 16
+Wis: 16
+Con: 16
+Cha: 16
+SavingPara: 6
+SavingRod: 6
+SavingPetri: 6
+SavingBreath: 6
+SavingSpell: 6
+E
+T 1001
+T 1005
 $

@@ -311,4 +311,201 @@ while %target_char_2%
   * Loop back.
 done
 ~
+#1004
+RW - Mob Response to Socials~
+0 c 100
+*~
+* say Trigger activated!
+if %self.alias% /= %arg%
+*  say I'm the target!
+*  say the command is %cmd%!
+  switch %cmd%
+  case aim
+    %echo% %actor.name% points their weapon at %self.alias%.
+    wait 1 sec
+    say Are you threatening me?
+    glare %actor.name%
+    break
+  case battlecry
+    %echo% %actor.name% gives a blood-curdling warcry towards %self.alias%.
+    wait 1 sec
+    say So rude.
+    giggle %actor.name%
+    break
+  case growl
+    %echo% %actor.name% growls menacingly at %self.alias%.
+    wait 1 sec
+    say How dare you gowl at me!
+    frown %actor.name%
+    break
+  case hate
+    %echo% %actor.name% stares at %self.alias%, eyes burning with hate.
+    wait 1 sec
+    say Don't be a hater!
+    tongue %actor.name%
+    break
+  case hiss
+    %echo% %actor.name% hisses at %self.alias%, trying to scare them.
+    wait 1 sec
+    say Wow, you are creepy.
+    ignore %actor.name%
+    break
+  case howl
+    %echo% %actor.name% howls at %self.alias%.
+    wait 1 sec
+    say Are you mental?
+    lol %actor.name%
+    break
+  case roar
+    %echo% %actor.name% ROARS aggressively at %self.alias%.
+    emote leans away from %actor.name%
+    wait 1 sec
+    say Just calm down, you!
+    lol %actor.name%
+    break
+  case swear
+    %echo% %actor.name% swears at %self.alias% profanely.
+    blush
+    wait 1 sec
+    say What language!
+    wince %actor.name%
+    break
+  done
+else
+  * Do nothing
+end
+return 0
+~
+#1005
+RW - Mob Greeting Trigger~
+0 g 100
+~
+* Mob Greeting Trigger, want to have one trigger that covers all mobs in zone 10
+* and only fires if they are in their normal room.
+*
+* Innkeeper
+if %self.vnum% == 1012 && %self.room.vnum% == 1012 && %actor.is_pc%
+  switch %random.4%
+    case 1
+      wait 1 sec
+      emote stops dusting.
+      break
+    case 2
+      wait 1 sec
+      emote closes guest register.
+      break
+    case 3
+      wait 1 sec
+      emote checks some settings at a control bank and turns around.
+      break
+    case 4
+      wait 1 sec
+      emote stands at the reception desk.
+      break
+    default
+      * Nothing
+  done
+  if %time.hour% > 0 && %time.hour% < 12
+    wait 2 sec
+    say Good morning to you.
+  elseif %time.hour% > 12 && %time.hour% < 18
+    wait 2 sec
+    say Hello, good afternoon.
+  elseif %time.hour% > 18
+    wait 2 sec
+    say Good evening.
+  else
+    wait 2 sec
+    say Hello, welcome to the Inn.
+  end
+  wait 3 sec
+  say Use @1help renting@n for information about using the Inn.
+* Postmaster
+elseif %self.vnum% == 1013 && %self.room.vnum% == 1013 && %actor.is_pc%
+  switch %random.3%
+    case 1
+      wait 1 sec
+      emote looks up from a pile of paperwork.
+      break
+    case 2
+      wait 1 sec
+      emote turns away from a control station.
+      break
+    case 3
+      wait 1 sec
+      emote is standing at the counter, looking at a sheet of stamps.
+      break
+    default
+      * Nothing
+  done
+  if %time.hour% > 0 && %time.hour% < 12
+    wait 2 sec
+    say Good morning.
+  elseif %time.hour% > 12 && %time.hour% < 18
+    wait 2 sec
+    say Good afternoon.
+  elseif %time.hour% > 18
+    wait 2 sec
+    say Good evening.
+  else
+    wait 2 sec
+    say Hello.
+  end  
+  wait 3 sec
+  say Use @1help mail@n for instructions on sending and receiving mail.
+* Waiter
+elseif %self.vnum% == 1018 && %self.room.vnum% == 1018 && %actor.is_pc%
+  switch %random.2%
+    case 1
+      wait 1 sec
+      emote walks up from behind the Maitre'D podium.
+      break
+    case 2
+      wait 1 sec
+      emote gives a polite cough.
+      break
+    default
+      * Nothing
+  done
+  if %time.hour% > 0 && %time.hour% < 12
+    wait 2 sec
+    say Good morning, and welcome to RouseWorld Restaurant.
+  elseif %time.hour% > 12 && %time.hour% < 18
+    wait 2 sec
+    say Good afternoon, welcome to Rouseworld Restaurant.
+  elseif %time.hour% > 18
+    wait 2 sec
+    say Good evening ... welcome to Rouseworld Restaurant.
+  else
+    wait 2 sec
+    say Welcome to Rouseworld Restaurant.
+  end
+  wait 3 sec
+  say Please have a seat wherever you like.
+  wait 2 sec
+  say Use @1list@n to see a menu.
+* Bartender
+elseif %self.vnum% == 1019 && %self.room.vnum% == 1019 && %actor.is_pc%
+  switch %random.2%
+    case 1
+      wait 1 sec
+      emote looks up while polishing a glass.
+      wait 2 sec
+      say What will you be drinking?
+      break
+    case 2
+      wait 1 sec
+      emote pauses while cleaning the bar with a towel.
+      wait 2 sec
+      say What'll it be?
+      break
+    default
+      * Nothing
+  done
+  wait 3 sec
+  say Use @1list@n to see our drink menu.
+else
+  * Nothing
+end
+~
 $~
