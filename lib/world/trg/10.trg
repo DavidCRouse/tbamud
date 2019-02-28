@@ -419,7 +419,7 @@ if %self.vnum% == 1012 && %self.room.vnum% == 1012 && %actor.is_pc%
     say Hello, welcome to the Inn.
   end
   wait 3 sec
-  say Use @1help renting@n for information about using the Inn.
+  say Use 	1help renting	n for information about using the Inn.
 * Postmaster
 elseif %self.vnum% == 1013 && %self.room.vnum% == 1013 && %actor.is_pc%
   switch %random.3%
@@ -452,7 +452,7 @@ elseif %self.vnum% == 1013 && %self.room.vnum% == 1013 && %actor.is_pc%
     say Hello.
   end  
   wait 3 sec
-  say Use @1help mail@n for instructions on sending and receiving mail.
+  say Use 	1help mail	n for instructions on sending and receiving mail.
 * Waiter
 elseif %self.vnum% == 1018 && %self.room.vnum% == 1018 && %actor.is_pc%
   switch %random.2%
@@ -483,7 +483,7 @@ elseif %self.vnum% == 1018 && %self.room.vnum% == 1018 && %actor.is_pc%
   wait 3 sec
   say Please have a seat wherever you like.
   wait 2 sec
-  say Use @1list@n to see a menu.
+  say Use 	1list	n to see a menu.
 * Bartender
 elseif %self.vnum% == 1019 && %self.room.vnum% == 1019 && %actor.is_pc%
   switch %random.2%
@@ -503,9 +503,95 @@ elseif %self.vnum% == 1019 && %self.room.vnum% == 1019 && %actor.is_pc%
       * Nothing
   done
   wait 3 sec
-  say Use @1list@n to see our drink menu.
+  say Use 	1list	n to see our drink menu.
 else
   * Nothing
+end
+~
+#1019
+RW - Bartener Droid Random Speach and Emotes~
+0 b 25
+~
+* Mobile Random - Bartender droid actions and speach, based on position
+* Positions: Sleeping, Resting, Sitting, Fighting, Standing (Looks like Mortally Wounded works as well)
+* Maybe add in a check for sleeping mobs/pcs for the sleeping quote
+if %self.pos% == Standing
+    * Things to do if in normal position
+    switch %random.4%
+        case 1
+            emote is polishing a glass.
+            wait 3 sec
+            emote stops polishing and stares into the distance.
+            wait 8 sec
+            emote looks down at the glass.
+            emote places the glass back behind the bar.
+        break
+        case 2
+            emote starts pulling down bottles, glasses and equipment.
+            wait 8 sec
+            emote begins pouring and mixing a drink of some kind.
+            wait 8 sec
+            emote looks at the drink it just made.
+            sigh
+            wait 3 sec
+            emote pours the drink down drain.
+            emote puts up the bottles and equipment.
+        break
+        case 3
+            emote starts pulling down bottles, glasses and equipment.
+            wait 8 sec
+            emote begins pouring and mixing a drink of some kind.
+            wait 8 sec
+            %echo% There is a BANG as the drink suddenly goes up in a little smoky fireball.
+            wait 4 sec
+            sigh
+            wait 3 sec
+            emote throws the glass in the trash.
+            emote puts up the bottles and equipment.
+        break
+        case 4
+            switch %random.6%
+                case 1
+                    say I laughed at a man with no pants ... 
+                    wait 3 sec
+                    say Until I realized I have no legs.
+                break
+                case 2
+                    say They say time heals all wounds.
+                break
+                case 3
+                    say Humans. Can't live with them ...
+                    wait 2 sec
+                    say Can't live without them.
+                break
+                case 4
+                    say Always do sober what you said you'd do drunk.
+                    wait 2 sec
+                    say That will teach you to keep your mouth shut.
+                break
+                case 5
+                    say The problem with the world is ...
+                    say That everyone is a few drinks behind.
+                break
+                case 6
+                    say The hard part about being a bartender ...
+                    say Is figuring out who is drunk ...
+                    wait 2 sec
+                    say And who is just stupid.
+                break
+        break
+        default
+            emote is wiping down the bar and quietly beeping to itself.
+        break
+    done
+elseif %self.pos% == Fighting
+        default
+            * Do nothing
+        break
+    done
+else
+    * Things to do if not Standing or Fighting
+    break
 end
 ~
 $~
