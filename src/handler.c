@@ -266,7 +266,6 @@ void affect_total(struct char_data *ch)
   GET_CHA(ch) = MAX(0, MIN(GET_CHA(ch), i));
   GET_STR(ch) = MAX(0, GET_STR(ch));
 
-/*  if (IS_NPC(ch)) { */
   if (IS_NPC(ch) || GET_LEVEL(ch) >= LVL_GRGOD) {
     GET_STR(ch) = MIN(GET_STR(ch), i);
   } else {
@@ -672,12 +671,20 @@ struct char_data *get_char_num(mob_rnum nr)
 /* put an object in a room */
 void obj_to_room(struct obj_data *object, room_rnum room)
 {
-  if (!object || room == NOWHERE || room > top_of_world)
+  if (!object || room == NOWHERE || room > top_of_world){
     log("SYSERR: Illegal value(s) passed to obj_to_room. (Room #%d/%d, obj %p)",
 	room, top_of_world, (void *)object);
+  }
   else {
-    object->next_content = world[room].contents;
-    world[room].contents = object;
+    if (world[room].contents == NULL){  // if list is empty
+      world[room].contents = object; // add object to list
+    }
+    else {
+      struct obj_data *i = world[room].contents; // define a temporary pointer
+      while (i->next_content != NULL) i = i->next_content; // find the first without a next_content
+        i->next_content = object; // add object at the end
+    }
+    object->next_content = NULL; // mostly for sanity. should do nothing.
     IN_ROOM(object) = room;
     object->carried_by = NULL;
     if (ROOM_FLAGGED(room, ROOM_HOUSE))
@@ -728,7 +735,6 @@ void obj_to_obj(struct obj_data *obj, struct obj_data *obj_to)
   obj->next_content = obj_to->contains;
   obj_to->contains = obj;
   obj->in_obj = obj_to;
-  tmp_obj = obj->in_obj;
 
   /* Add weight to container, unless unlimited. */
   if (GET_OBJ_VAL(obj->in_obj, 0) > 0) {
@@ -752,7 +758,6 @@ void obj_from_obj(struct obj_data *obj)
     return;
   }
   obj_from = obj->in_obj;
-  temp = obj->in_obj;
   REMOVE_FROM_LIST(obj, obj_from->contains, next_content);
 
   /* Subtract weight from containers container unless unlimited. */
@@ -991,18 +996,24 @@ void extract_char_final(struct char_data *ch)
  * trivial workaround of 'vict = next_vict' doesn't work if the _next_ person
  * in the list gets killed, for example, by an area spell. Why do we leave them
  * on the character_list? Because code doing 'vict = vict->next' would get
- * really confused otherwise. */
+ * really confused otherwise.
+ *
+ * Fixed a bug where it would over-count extractions if you try to extract the
+ * same character twice (e.g. double-purging in a script) -khufu / EmpireMUD
+ */
 void extract_char(struct char_data *ch)
 {
   char_from_furniture(ch);
   clear_char_event_list(ch);
 
-  if (IS_NPC(ch))
+  if (IS_NPC(ch) && !MOB_FLAGGED(ch, MOB_NOTDEADYET)) {
     SET_BIT_AR(MOB_FLAGS(ch), MOB_NOTDEADYET);
-  else
+    ++extractions_pending;
+  }
+  else if (!IS_NPC(ch) && !PLR_FLAGGED(ch, PLR_NOTDEADYET)) {
     SET_BIT_AR(PLR_FLAGS(ch), PLR_NOTDEADYET);
-
-  extractions_pending++;
+    ++extractions_pending;
+  }
 }
 
 /* I'm not particularly pleased with the MOB/PLR hoops that have to be jumped

@@ -207,7 +207,6 @@ void run_autowiz(void)
   if (CONFIG_USE_AUTOWIZ) {
     size_t res;
     char buf[256];
-    int i;
 
 #if defined(CIRCLE_UNIX)
     res = snprintf(buf, sizeof(buf), "nice ../bin/autowiz %d %s %d %s %d &",
@@ -221,7 +220,9 @@ void run_autowiz(void)
     if (res < sizeof(buf)) {
       mudlog(CMP, LVL_IMMORT, FALSE, "Initiating autowiz.");
       reboot_wizlists();
-      i = system(buf);
+      int rval = system(buf);
+      if(rval != 0)
+        mudlog(BRF, LVL_IMMORT, TRUE, "Warning: autowiz failed with return value %d", rval);
     } else
       log("Cannot run autowiz: command-line doesn't fit in buffer.");
   }
@@ -376,7 +377,7 @@ static void check_idling(struct char_data *ch)
 	Crash_rentsave(ch, 0);
       else
 	Crash_idlesave(ch);
-      mudlog(CMP, LVL_GOD, TRUE, "%s force-rented and extracted (idle).", GET_NAME(ch));
+      mudlog(CMP, MAX(LVL_GOD, GET_INVIS_LEV(ch)), TRUE, "%s force-rented and extracted (idle).", GET_NAME(ch));
       add_llog_entry(ch, LAST_IDLEOUT);
       extract_char(ch);
     }

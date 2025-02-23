@@ -461,6 +461,9 @@ int has_key(struct char_data *ch, obj_vnum key)
 {
   struct obj_data *o;
 
+  if (key == NOTHING)
+    return (0);
+
   for (o = ch->carrying; o; o = o->next_content)
     if (GET_OBJ_VNUM(o) == key)
       return (1);
@@ -655,7 +658,7 @@ ACMD(do_gen_door)
     else if (!(DOOR_IS_UNLOCKED(ch, obj, door)) && IS_SET(flags_door[subcmd], NEED_UNLOCKED) && ((!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOKEY))) && (has_key(ch, keynum)) )
     {
       send_to_char(ch, "It is locked, but you have the key.\r\n");
-      send_to_char(ch, "*Click*\r\n");
+      do_doorcmd(ch, obj, door, SCMD_UNLOCK);
       do_doorcmd(ch, obj, door, subcmd);
     }
     else if (!(DOOR_IS_UNLOCKED(ch, obj, door)) && IS_SET(flags_door[subcmd], NEED_UNLOCKED) && ((!IS_NPC(ch) && PRF_FLAGGED(ch, PRF_AUTOKEY))) && (!has_key(ch, keynum)) )
@@ -770,8 +773,6 @@ ACMD(do_sit)
 
   one_argument(argument, arg);
 
-  if (!*arg)
-    found = 0;
   if (!(furniture = get_obj_in_list_vis(ch, arg, NULL, world[ch->in_room].contents)))
     found = 0;
   else
