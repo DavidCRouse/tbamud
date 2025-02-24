@@ -1502,7 +1502,7 @@ char *add_commas(long long num)
   static char comma_string[BUFFER_COUNT][DIGITS_PER_BUFFER];
   static int which = 0;
 
-  sprintf(num_string, "%Ld", num);
+  sprintf(num_string, "%lld", num);
   len = strlen(num_string);
 
   for (i = j = 0; num_string[i]; ++i) {
@@ -1586,4 +1586,3 @@ void remove_from_string(char *string, const char *to_remove)
     }
     
 }
->>>>>>> upstream/master
