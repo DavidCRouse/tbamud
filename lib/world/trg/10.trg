@@ -419,7 +419,7 @@ if %self.vnum% == 1012 && %self.room.vnum% == 1012 && %actor.is_pc%
     say Hello, welcome to the Inn.
   end
   wait 3 sec
-  say Use 	1help renting	n for information about using the Inn.
+  say Use @1help renting@n for information about using the Inn.
 * Postmaster
 elseif %self.vnum% == 1013 && %self.room.vnum% == 1013 && %actor.is_pc%
   switch %random.3%
@@ -452,7 +452,7 @@ elseif %self.vnum% == 1013 && %self.room.vnum% == 1013 && %actor.is_pc%
     say Hello.
   end  
   wait 3 sec
-  say Use 	1help mail	n for instructions on sending and receiving mail.
+  say Use @1help mail@n for instructions on sending and receiving mail.
 * Waiter
 elseif %self.vnum% == 1018 && %self.room.vnum% == 1018 && %actor.is_pc%
   switch %random.2%
@@ -483,7 +483,7 @@ elseif %self.vnum% == 1018 && %self.room.vnum% == 1018 && %actor.is_pc%
   wait 3 sec
   say Please have a seat wherever you like.
   wait 2 sec
-  say Use 	1list	n to see a menu.
+  say Use @1list@n to see a menu.
 * Bartender
 elseif %self.vnum% == 1019 && %self.room.vnum% == 1019 && %actor.is_pc%
   switch %random.2%
@@ -503,7 +503,7 @@ elseif %self.vnum% == 1019 && %self.room.vnum% == 1019 && %actor.is_pc%
       * Nothing
   done
   wait 3 sec
-  say Use 	1list	n to see our drink menu.
+  say Use @1list@n to see our drink menu.
 else
   * Nothing
 end
