@@ -191,8 +191,9 @@ int strn_cmp(const char *arg1, const char *arg2, int n)
 void basic_mud_vlog(const char *format, va_list args)
 {
   time_t ct = time(0);
-  char timestr[20];
-
+  char timestr[21];
+  int i;
+  
   if (logfile == NULL) {
     puts("SYSERR: Using log() before stream was initialized!");
     return;
@@ -201,6 +202,7 @@ void basic_mud_vlog(const char *format, va_list args)
   if (format == NULL)
     format = "SYSERR: log() received a NULL format.";
 
+  for (i=0;i<21;i++) timestr[i]=0;
   strftime(timestr, sizeof(timestr), "%b %d %H:%M:%S %Y", localtime(&ct));
 
   fprintf(logfile, "%-20.20s :: ", timestr);
@@ -961,6 +963,7 @@ void column_list(struct char_data *ch, int num_cols, const char **list, int list
    int num_per_col, col_width, r, c, i, offset = 0;
    char buf[MAX_STRING_LENGTH];
 
+   *buf='\0';
    /* Work out the longest list item */
    for (i=0; i<list_length; i++)
      if (max_len < strlen(list[i]))
@@ -973,11 +976,6 @@ void column_list(struct char_data *ch, int num_cols, const char **list, int list
 
    /* Ensure that the number of columns is in the range 1-10 */
    num_cols = MIN(MAX(num_cols,1), 10);
-
-   /* Work out the longest list item */
-   for (i=0; i<list_length; i++)
-     if (max_len < strlen(list[i]))
-       max_len = strlen(list[i]);
 
    /* Calculate the width of each column */
    if (IS_NPC(ch))   col_width = 80 / num_cols;
@@ -1504,7 +1502,7 @@ char *add_commas(long long num)
   static char comma_string[BUFFER_COUNT][DIGITS_PER_BUFFER];
   static int which = 0;
 
-  sprintf(num_string, "%Ld", num);
+  sprintf(num_string, "%lld", num);
   len = strlen(num_string);
 
   for (i = j = 0; num_string[i]; ++i) {
@@ -1522,4 +1520,69 @@ char *add_commas(long long num)
   #undef DIGITS_PER_GROUP
   #undef BUFFER_COUNT
   #undef DIGITS_PER_BUFFER
+}
+
+/* This removes all trailing whitespace from the end of a string */
+char *right_trim_whitespace(const char *string)
+{
+  char *r = strdup(string);
+  if (r != NULL)
+  {
+    char *fr = r + strlen(string) - 1;
+    while( (isspace(*fr) || !isprint(*fr) || *fr == 0) && fr >= r) --fr;
+    *++fr = 0;
+  }
+
+  return r;
+}
+
+/**
+ * Remove all occurrences of a given word in string.
+ */
+void remove_from_string(char *string, const char *to_remove)
+{
+    int i, j, string_len, to_remove_len;
+    int found;
+
+    string_len   = strlen(string);      // Length of string
+    to_remove_len = strlen(to_remove); // Length of word to remove
+
+
+    for(i=0; i <= string_len - to_remove_len; i++)
+    {
+        /* Match word with string */
+        found = 1;
+        for(j=0; j<to_remove_len; j++)
+        {
+            if(string[i + j] != to_remove[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+
+        /* If it is not a word */
+        if(string[i + j] != ' ' && string[i + j] != '\t' && string[i + j] != '\n' && string[i + j] != '\0') 
+        {
+            found = 0;
+        }
+
+        /*
+         * If word is found then shift all characters to left
+         * and decrement the string length
+         */
+        if(found == 1)
+        {
+            for(j=i; j<=string_len - to_remove_len; j++)
+            {
+                string[j] = string[j + to_remove_len];
+            }
+
+            string_len = string_len - to_remove_len;
+
+            // We will match next occurrence of word from current index.
+            i--;
+        }
+    }
+    
 }
